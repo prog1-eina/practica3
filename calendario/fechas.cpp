@@ -19,7 +19,7 @@
  *       día.
  */
 void componer(int dia, int mes, int agno, int& f) {
-	// Completar
+    // Completar
 }
 
 
@@ -32,7 +32,7 @@ void componer(int dia, int mes, int agno, int& f) {
  *       respectivamente, al día, al mes y al año de la fecha «f».
  */
 void descomponer(int f, int& dia, int& mes, int& agno) {
-	// Completar
+    // Completar
 }
 
 
@@ -45,7 +45,7 @@ void descomponer(int f, int& dia, int& mes, int& agno) {
  *       del parámetro «f1» es anterior a la representada por «f2».
  */
 bool esAnterior(int f1, int f2) {
-	// Completar
+    // Completar
 }
 
 
@@ -95,7 +95,7 @@ int diasDelMes(int mes, int agno) {
  *                    diasDelAgno(2020) devuelve 366.
  */
 int diasDelAgno(int agno) {
-	// Completar
+    // Completar
 }
 
 
@@ -110,7 +110,7 @@ int diasDelAgno(int agno) {
  *                    diaEnElAgno(31, 12, 2020) devuelve 366.
  */
 int diaEnElAgno(int dia, int mes, int agno) {
-	// Completar
+    // Completar
 }
 
 
@@ -131,7 +131,7 @@ int diaEnElAgno(int dia, int mes, int agno) {
  *       diaSiguiente(d, m, a) los valores serían d = 1, m = 1 y a = 2023.
  */
 void diaSiguiente(int& dia, int& mes, int& agno) {
-	// Completar
+    // Completar
 }
 
 
@@ -145,5 +145,5 @@ void diaSiguiente(int& dia, int& mes, int& agno) {
  *       codifica martes y así sucesivamente hasta el 6, que codifica el domingo.
  */
 int diaDeLaSemana(int dia, int mes, int agno) {
-	// Completar
+    // Completar
 }
