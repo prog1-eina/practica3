@@ -1,6 +1,7 @@
 ﻿/*********************************************************************************
  * Curso de Programación 1. Tema 7 y práctica 3
- * Autores: Miguel Ángel Latre y Javier Martínez
+ * Autores: Miguel Ángel Latre y Javier Martínez (esqueleto inicial)
+ *          ¡PON AQUÍ TU NOMBRE! (funciones establecidas en la práctica 3)
  * Última revisión: 17 de octubre de 2018
  * Resumen: Fichero calculos.h de interfaz del módulo de biblioteca
  *          «calculos» que facilita algunas funciones para trabajar con
