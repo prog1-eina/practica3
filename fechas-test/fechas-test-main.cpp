@@ -12,12 +12,10 @@
 
 
 /*
- * Pre:  ---
- * Post: Ha realizado pruebas unitarias de las funciones del módulo de
- *       biblioteca «fechas». En cada prueba, ha indicado los parámetros
- *       utilizados y si el resultado ha sido correcto o no. Además, en
- *       los casos negativos, ha indicado las salidas producidas por la
- *       función y las que debería haber producido.
+ * Programa que realiza pruebas unitarias de las funciones del módulo de
+ * biblioteca «fechas». Por cada prueba, indica los parámetros utilizados y si el
+ * resultado es correcto o no. Además, en los casos negativos, indica las salidas
+ * producidas por la función y las que debería haber producido.
  */
 int main() {
     probarComponer(31, 10, 2016, 20161031);
