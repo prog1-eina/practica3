@@ -1,0 +1,57 @@
+{
+    "tasks": [
+        {
+            "label": "Compilar proyecto «calculadora»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make.exe",
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+        },
+        {
+            "label": "Ejecutar proyecto «calculadora»",
+            "type": "shell",
+            "command": "bin/calculadora",
+            "windows": {
+                "command": "chcp 65001 ; bin\\calculadora.exe",
+            },
+            "dependsOn": "Compilar proyecto «calculadora»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
+            "label": "Compilar tests del módulo «calculos»",
+            "type": "shell",
+            "command": "make",
+            "windows": {
+                "command": "mingw32-make",
+            },
+            "args": [
+                "calculos-test"
+            ],
+            "problemMatcher": ["$gcc"],
+            "group": "test",
+        },
+        {
+            "label": "Ejecutar tests del módulo «calculos»",
+            "type": "shell",
+            "command": "bin/calculos-test",
+            "windows": {
+                "command": "chcp 65001 ; bin\\calculos-test",
+            },
+            "dependsOn": "Compilar tests del módulo «calculos»",
+            "problemMatcher": ["$gcc"],
+        },
+    ],
+    "presentation": {
+        "showReuseMessage": false,
+        "panel": "shared",
+        "reveal": "always",
+        "focus": true,
+    },
+    "version": "2.0.0"
+}
