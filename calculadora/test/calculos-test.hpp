@@ -3,7 +3,7 @@
  * Autores: Miguel Ángel Latre
  * Última revisión: 21 de octubre de 2019
  * Resumen: Fichero de intefaz de un módulo auxiliar «calculos-test» que
- *          hace pruebas unitarias de las funciones del módulo «calculos».
+ *          hace pruebas de unidad de las funciones del módulo «calculos».
  ************************************************************************/
 
 #ifndef CALCULOS_TEST_H_INCLUDED
@@ -26,6 +26,6 @@ void probarEsCapicua(const int n, const bool valorEsperado);
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que devolvió la función.
  */
-void probarMcm(const int n, const int m, const int valorEsperado);
+void probarMcm(const int n, const int m, const unsigned int valorEsperado);
 
 #endif // CALCULOS_TEST_H_INCLUDED

@@ -12,9 +12,9 @@
  ************************************************************************/
 
 #include <iostream>
-#include "../calculadora/calculos.h"
+#include "testing-prog1.hpp"
+#include "calculos.hpp"
 using namespace std;
-
 
 /*
  * Pre:  «valorEsperado» es true si y solo si «n» es un número capicúa.
@@ -25,14 +25,7 @@ using namespace std;
  */
 void probarEsCapicua(const int n, const bool valorEsperado) {
     cout << "Prueba esCapicua(" << n << ") ";
-    bool valorDevuelto = esCapicua(n);
-    if (valorDevuelto == valorEsperado) {
-        cout << "correcta" << endl;
-    } else {
-        cout << "incorrecta:" << endl;
-        cout << "   debería haber devuelto " << boolalpha << valorEsperado
-             << " pero ha devuelto " << valorDevuelto << endl;
-    }
+    escribirResultadoPrueba(valorEsperado, esCapicua(n));
 }
 
 /*
@@ -42,14 +35,8 @@ void probarEsCapicua(const int n, const bool valorEsperado) {
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que devolvió la función.
  */
-void probarMcm(const int n, const int m, const int valorEsperado) {
-        cout << "Prueba mcm(" << n << ", " << m << ") ";
-    int valorDevuelto = mcm(n, m);
-    if (valorDevuelto == valorEsperado) {
-        cout << "correcta" << endl;
-    } else {
-        cout << "incorrecta:" << endl;
-        cout << "   debería haber devuelto " << valorEsperado
-             << " pero ha devuelto " << valorDevuelto << endl;
-    }
+void probarMcm(const int n, const int m, const unsigned int valorEsperado) {
+    cout << "Prueba mcm(" << n << ", " << m << ") ";
+    escribirResultadoPrueba(valorEsperado, mcm(n, m));
 }
+

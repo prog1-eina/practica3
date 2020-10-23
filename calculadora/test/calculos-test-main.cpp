@@ -7,7 +7,7 @@
  ************************************************************************/
 
 #include <iostream>
-#include "calculos-test.h"
+#include "calculos-test.hpp"
 using namespace std;
 
 /*
