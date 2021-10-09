@@ -1,15 +1,17 @@
 ################################################################################
-## Fichero «Makefile» para el programa «calendario» y el programa de pruebas
-## del módulo «fechas»
+## Fichero «Makefile» para:
+##  - el programa «calendario»
+##  - el programa de pruebas del módulo «fechas»
 ################################################################################
 
 ################################################################################
 ## Declaracion de variables del fichero «Makefile»
 
 ## DIRECTORIOS
-SOURCE_DIR = src
-TEST_DIR = test
-TESTING_LIB_DIR = ../testing-prog1
+
+SOURCE_DIR = src/calendario
+TEST_DIR = test/calendario
+TESTING_LIB_DIR = test/testing-prog1
 BUILD_DIR = build
 BIN_DIR = bin
 
@@ -19,15 +21,14 @@ VPATH = $(SOURCE_DIR) $(TEST_DIR) $(TESTING_LIB_DIR)
 CXX = g++
 CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
 
-
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
-OBJECTS =  $(addprefix $(BUILD_DIR)/, calendario-main.o fechas.o)
+OBJECTS = $(addprefix $(BUILD_DIR)/, calendario-main.o fechas.o)
+
 TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/, fechas-test-main.o \
                     fechas-test.o testing-prog1.o fechas.o)
 
 ################################################################################
 ## Reglas del fichero «Makefile»
-
 all: calendario
 
 calendario: $(OBJECTS) | $(BIN_DIR)

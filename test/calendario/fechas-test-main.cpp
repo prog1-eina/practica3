@@ -1,10 +1,10 @@
-﻿/*************************************************************************
+﻿/*******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
  * Última revisión: 22 de octubre de 2018
  * Resumen: Módulo principal de un programa que hace pruebas unitarias de
  *          las funciones del módulo «fechas».
- ************************************************************************/
+ ******************************************************************************/
 
  #include <iostream>
  #include "fechas-test.hpp"
@@ -13,9 +13,9 @@
 
 /*
  * Programa que realiza pruebas unitarias de las funciones del módulo de
- * biblioteca «fechas». Por cada prueba, indica los parámetros utilizados y si el
- * resultado es correcto o no. Además, en los casos negativos, indica las salidas
- * producidas por la función y las que debería haber producido.
+ * biblioteca «fechas». Por cada prueba, indica los parámetros utilizados y si
+ * el resultado es correcto o no. Además, en los casos negativos, indica las
+ * salidas producidas por la función y las que debería haber producido.
  */
 int main() {
     probarComponer(31, 10, 2016, 20161031);
@@ -75,33 +75,32 @@ int main() {
     probarDiaEnElAgno(31, 12, 2019, 365);
     probarDiaEnElAgno(31, 12, 2020, 366);
     
-    const int LUNES     = 0;
-    const int MARTES    = 1;
-    const int MIERCOLES = 2;
-    const int JUEVES    = 3;
-    const int VIERNES   = 4;
-    const int SABADO    = 5;
-    const int DOMINGO   = 6;
+    const unsigned LUNES     = 0;
+    const unsigned MARTES    = 1;
+    const unsigned MIERCOLES = 2;
+    const unsigned JUEVES    = 3;
+    const unsigned VIERNES   = 4;
+    const unsigned SABADO    = 5;
+    const unsigned DOMINGO   = 6;
     
-    probarDiaDeLaSemana( 1, 1, 1900, LUNES);
-    probarDiaDeLaSemana( 2, 1, 1900, MARTES);
-    probarDiaDeLaSemana( 7, 1, 1900, DOMINGO);
-    probarDiaDeLaSemana( 8, 1, 1900, LUNES);
-    probarDiaDeLaSemana(31, 1, 1900, MIERCOLES);
-    probarDiaDeLaSemana( 1, 2, 1900, JUEVES);
-    probarDiaDeLaSemana( 1, 2, 1900, JUEVES);
-    probarDiaDeLaSemana(28, 2, 1900, MIERCOLES);
-    probarDiaDeLaSemana( 1, 3, 1900, JUEVES);
-    probarDiaDeLaSemana(30, 4, 1900, LUNES);
-    probarDiaDeLaSemana( 1, 5, 1900, MARTES);
+    probarDiaDeLaSemana( 1,  1, 1900, LUNES);
+    probarDiaDeLaSemana( 2,  1, 1900, MARTES);
+    probarDiaDeLaSemana( 7,  1, 1900, DOMINGO);
+    probarDiaDeLaSemana( 8,  1, 1900, LUNES);
+    probarDiaDeLaSemana(31,  1, 1900, MIERCOLES);
+    probarDiaDeLaSemana( 1,  2, 1900, JUEVES);
+    probarDiaDeLaSemana(28,  2, 1900, MIERCOLES);
+    probarDiaDeLaSemana( 1,  3, 1900, JUEVES);
+    probarDiaDeLaSemana(30,  4, 1900, LUNES);
+    probarDiaDeLaSemana( 1,  5, 1900, MARTES);
     probarDiaDeLaSemana(31, 12, 1900, LUNES);
-    probarDiaDeLaSemana( 1, 1, 1901, MARTES);
-    probarDiaDeLaSemana(28, 2, 1901, JUEVES);
-    probarDiaDeLaSemana( 1, 3, 1901, VIERNES);
-    probarDiaDeLaSemana(29, 2, 1904, LUNES);
-    probarDiaDeLaSemana( 1, 3, 1904, MARTES);
-    probarDiaDeLaSemana(29, 2, 2000, MARTES);
-    probarDiaDeLaSemana( 1, 3, 2000, MIERCOLES);
+    probarDiaDeLaSemana( 1,  1, 1901, MARTES);
+    probarDiaDeLaSemana(28,  2, 1901, JUEVES);
+    probarDiaDeLaSemana( 1,  3, 1901, VIERNES);
+    probarDiaDeLaSemana(29,  2, 1904, LUNES);
+    probarDiaDeLaSemana( 1,  3, 1904, MARTES);
+    probarDiaDeLaSemana(29,  2, 2000, MARTES);
+    probarDiaDeLaSemana( 1,  3, 2000, MIERCOLES);
     
     probarDiaDeLaSemana(27, 10, 2019, DOMINGO);
     probarDiaDeLaSemana(28, 10, 2019, LUNES);

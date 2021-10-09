@@ -1,11 +1,12 @@
-﻿/*********************************************************************************
+﻿/*******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores originales: Miguel Ángel Latre y Javier Martínez
- * Modificado por: ¡PON AQUÍ TU NOMBRE! (código de las funciones establecidas en la práctica 3)
- * Última revisión: 23 de octubre de 2019
+ * Modificado por: ¡PON AQUÍ TU NOMBRE! (código de las funciones establecidas en
+ *                 la práctica 3)
+ * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de implementación de un módulo «fechas» que ofrece
  *          funciones para trabajar con fechas del calendario
-\********************************************************************************/
+\******************************************************************************/
 
 #include "fechas.hpp"
 
@@ -18,8 +19,8 @@
  *       año de la fecha, los dígitos «mm», el mes y los dígitos «dd», el
  *       día.
  */
-void componer(unsigned int dia, unsigned int mes, unsigned int agno,
-              unsigned int& f) {
+void componer(unsigned dia, unsigned mes, unsigned agno,
+              unsigned& f) {
     // Completar
 }
 
@@ -32,8 +33,8 @@ void componer(unsigned int dia, unsigned int mes, unsigned int agno,
  * Post: Los valores de los parámetros «dia», «mes» y «agno» son iguales,
  *       respectivamente, al día, al mes y al año de la fecha «f».
  */
-void descomponer(unsigned int f,
-                 unsigned int& dia, unsigned int& mes, unsigned int& agno) {
+void descomponer(unsigned f,
+                 unsigned& dia, unsigned& mes, unsigned& agno) {
     // Completar
 }
 
@@ -46,7 +47,7 @@ void descomponer(unsigned int f,
  * Post: Ha devuelto true si y solo si la fecha representada por el valor
  *       del parámetro «f1» es anterior a la representada por «f2».
  */
-bool esAnterior(unsigned int f1, unsigned int f2) {
+bool esAnterior(unsigned f1, unsigned f2) {
     // Completar
 }
 
@@ -56,7 +57,7 @@ bool esAnterior(unsigned int f1, unsigned int f2) {
  * Post: Ha devuelto true si y solo si el año «agno» es bisiesto de
  *       acuerdo con las reglas del calendario gregoriano.
  */
-bool esBisiesto(unsigned int agno) {
+bool esBisiesto(unsigned agno) {
     bool multiplo4   = (agno %   4 == 0);
     bool multiplo100 = (agno % 100 == 0);
     bool multiplo400 = (agno % 400 == 0);
@@ -72,21 +73,8 @@ bool esBisiesto(unsigned int agno) {
  *                    diasDelMes(2, 2018) devuelve 28 y
  *                    diasDelMes(2, 2020) devuelve 29.
  */
-unsigned int diasDelMes(unsigned int mes, unsigned int agno) {
-    if (mes == 2) {
-        if (esBisiesto(agno)) {
-            return 29;
-        }
-        else {
-            return 28;
-        }
-    }
-    else if (mes == 4 || mes == 6 || mes == 9 || mes == 11) {
-        return 30;
-    }
-    else {
-        return 31;
-    }
+unsigned diasDelMes(unsigned mes, unsigned agno) {
+    // Completar
 }
 
 
@@ -96,7 +84,7 @@ unsigned int diasDelMes(unsigned int mes, unsigned int agno) {
  *       Por ejemplo: diasDelAgno(2018) devuelve 365 y
  *                    diasDelAgno(2020) devuelve 366.
  */
-unsigned int diasDelAgno(unsigned int agno) {
+unsigned diasDelAgno(unsigned agno) {
     // Completar
 }
 
@@ -111,7 +99,7 @@ unsigned int diasDelAgno(unsigned int agno) {
  *                    diaEnElAgno(1, 2, 2019) devuelve 32 y
  *                    diaEnElAgno(31, 12, 2020) devuelve 366.
  */
-unsigned int diaEnElAgno(unsigned int dia, unsigned int mes, unsigned int agno) {
+unsigned diaEnElAgno(unsigned dia, unsigned mes, unsigned agno) {
     // Completar
 }
 
@@ -132,7 +120,7 @@ unsigned int diaEnElAgno(unsigned int dia, unsigned int mes, unsigned int agno) 
  *       Si los valores fueran d = 31, m = 12 y a = 2022, tras la invocación
  *       diaSiguiente(d, m, a) los valores serían d = 1, m = 1 y a = 2023.
  */
-void diaSiguiente(unsigned int& dia, unsigned int& mes, unsigned int& agno) {
+void diaSiguiente(unsigned& dia, unsigned& mes, unsigned& agno) {
     // Completar
 }
 
@@ -146,6 +134,6 @@ void diaSiguiente(unsigned int& dia, unsigned int& mes, unsigned int& agno) {
  *       acuerdo con la siguiente codificación: el 0 codifica el lunes, el 1
  *       codifica martes y así sucesivamente hasta el 6, que codifica el domingo.
  */
-unsigned int diaDeLaSemana(unsigned int dia, unsigned int mes, unsigned int agno) {
+unsigned diaDeLaSemana(unsigned dia, unsigned mes, unsigned agno) {
     // Completar
 }

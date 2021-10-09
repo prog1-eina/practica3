@@ -1,6 +1,6 @@
 /*********************************************************************************
  * Curso de Programación 1. Tema 7
- * Autores: ¡PONED AQUI VUESTROS NOMBRES!
+ * Autores: ¡PON AQUÍ TU NOMBRE!
  * Última revisión: 23 de octubre de 2019
  * Resumen: Programa que escribe en la pantalla el calendario de un determinado
  *          mes de un año, que se solicitan al usuario. El programa se asegura de
@@ -12,7 +12,7 @@
 
 
 /*
- * ¡ESCRIBID LA ESPECIFICACIÓN!
+ * ¡ESCRIBE LA ESPECIFICACIÓN!
  */
 int main() {
     return 0;

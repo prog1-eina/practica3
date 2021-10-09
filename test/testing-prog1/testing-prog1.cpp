@@ -22,7 +22,7 @@ using namespace std;
 
 /* 
  * Constantes que definen las secuencias de escape que permiten escribir
- * mensajes en la pantalla en color rojo, rojo y negrita y normal.
+ * mensajes en la pantalla en color rojo, rojo con negrita y normal.
  */
 const string ESCAPE_ROJO = "\033[31m";
 const string ESCAPE_ROJO_NEGRITA = "\033[31;1m";
@@ -36,9 +36,9 @@ const string ESCAPE_NORMAL = "\033[0m";
  *       se ha realizado una prueba de una determinada función con unos
  *       determinados argumentos.
  * Post: Si los valores de «valorEsperado» y «valorCalculado» son iguales, ha
- *       completado un mensaje en la pantalla informando de que la prueba ha sido
- *       correcta. En caso contrario, indica que ha sido incorrecta y ha informado
- *       también de los valores de «valorEsperado» y «valorCalculado».
+ *       completado un mensaje en la pantalla informando de que la prueba ha
+ *       sido correcta. En caso contrario, indica que ha sido incorrecta y ha
+ *       informado también de los valores de «valorEsperado» y «valorCalculado».
  */
 
 /*
@@ -63,10 +63,10 @@ void escribirResultadoPrueba(const int valorEsperado, const int valorCalculado) 
 
 
 /*
- * Versión de la función para datos de tipo «unsigned int»
+ * Versión de la función para datos de tipo «unsigned»
  */
-void escribirResultadoPrueba(const unsigned int valorEsperado, 
-                             const unsigned int valorCalculado) {
+void escribirResultadoPrueba(const unsigned valorEsperado, 
+                             const unsigned valorCalculado) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
     }

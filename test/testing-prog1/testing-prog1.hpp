@@ -1,7 +1,7 @@
 ﻿/*******************************************************************************
  * Curso de Programación 1. Prácticas
  * Autores: Miguel Ángel Latre
- * Última revisión: 18 de octubre de 2020
+ * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de cabecera de un módulo auxiliar
  *          «testing» que escribe en la pantalla los resultados de realizar
  *          pruebas de unidad de algunas funciones del módulo «calculos» y 
@@ -18,8 +18,7 @@
 #include <string>
 using namespace std;
 
-#ifndef TESTING_H_INCLUDED
-#define TESTING_H_INCLUDED
+#pragma once
 
 /*
  * Especificación común a TODAS las funciones definidas en este fichero de
@@ -29,9 +28,9 @@ using namespace std;
  *       se ha realizado una prueba de una determinada función con unos
  *       determinados argumentos.
  * Post: Si los valores de «valorEsperado» y «valorCalculado» son iguales, ha
- *       completado un mensaje en la pantalla informando de que la prueba ha sido
- *       correcta. En caso contrario, indica que ha sido incorrecta y ha informado
- *       también de los valores de «valorEsperado» y «valorCalculado».
+ *       completado un mensaje en la pantalla informando de que la prueba ha
+ *       sido correcta. En caso contrario, indica que ha sido incorrecta y ha
+ *       informado también de los valores de «valorEsperado» y «valorCalculado».
  */
 
 /*
@@ -40,15 +39,16 @@ using namespace std;
 void escribirResultadoPrueba(const int valorEsperado, const int valorCalculado);
 
 /*
- * Versión de la función para datos de tipo «unsigned int»
+ * Versión de la función para datos de tipo «unsigned»
  */
-void escribirResultadoPrueba(const unsigned int valorEsperado,
-                             const unsigned int valorCalculado);
+void escribirResultadoPrueba(const unsigned valorEsperado,
+                             const unsigned valorCalculado);
 
 /*
  * Versión de la función para datos de tipo «bool»
  */
-void escribirResultadoPrueba(const bool valorEsperado, const bool valorCalculado);
+void escribirResultadoPrueba(const bool valorEsperado,
+                             const bool valorCalculado);
 
 /*
  * Versión de la función para datos de tipo «double»
@@ -66,4 +66,3 @@ void escribirResultadoPrueba(const char valorEsperado,
  */
 void escribirResultadoPrueba(const string valorEsperado,
                              const string valorCalculado);
-#endif // TESTING_H_INCLUDED

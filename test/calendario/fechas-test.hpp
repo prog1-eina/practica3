@@ -1,14 +1,13 @@
-﻿/*************************************************************************
+﻿/*******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
- * Última revisión: 22 de octubre de 2018
+ * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de interfaz de un módulo auxiliar «pruebas»
  *          que hace pruebas unitarias de las funciones del módulo
  *          «fechas».
- ************************************************************************/
+ ******************************************************************************/
 
-#ifndef FECHAS_TEST_H_INCLUDED
-#define FECHAS_TEST_H_INCLUDED
+#pragma once
 
 /*
  * Pre:  «valorEsperado» es el entero que, al ser escrito en base 10,
@@ -21,8 +20,8 @@
  *       En caso negativo, ha informado también acerca del valor
  *       incorrecto que calculó la función.
  */
-void probarComponer(const unsigned int dia, const unsigned int mes, 
-                    const unsigned int agno, const unsigned int valorEsperado);
+void probarComponer(unsigned dia, unsigned mes, unsigned agno, 
+                    unsigned valorEsperado);
 
 
 /*
@@ -37,8 +36,8 @@ void probarComponer(const unsigned int dia, const unsigned int mes,
  *       En caso negativo, ha  informado también acerca de los valores
  *       incorrectos que calculó la función.
  */
-void probarDescomponer(const unsigned int fecha, const unsigned int diaEsperado,
-     const unsigned int mesEsperado, const unsigned int agnoEsperado);
+void probarDescomponer(unsigned fecha, unsigned diaEsperado, 
+                       unsigned mesEsperado, unsigned agnoEsperado);
 
 
 /*
@@ -49,8 +48,7 @@ void probarDescomponer(const unsigned int fecha, const unsigned int diaEsperado,
  *       devuelto el valor correcto «valorEsperado». En caso negativo, ha
  *       informado también acerca del valor incorrecto que devolvió la función.
  */
-void probarEsAnterior(const unsigned int fecha1, const unsigned int fecha2,
-                      const bool valorEsperado);
+void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado);
 
 
 /*
@@ -63,8 +61,8 @@ void probarEsAnterior(const unsigned int fecha1, const unsigned int fecha2,
  *       ha informado también acerca del valor incorrecto devuelto por
  *       la función.
  */
-void probarDiasDelMes(const unsigned int mes, const unsigned int agno,
-                      const unsigned int valorEsperado);
+void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado);
+
 
 /*
  * Pre:  agno > 1582 y «valorEsperado» es el número de días que tiene el
@@ -75,7 +73,8 @@ void probarDiasDelMes(const unsigned int mes, const unsigned int agno,
  *       negativo, ha informado también acerca del valor incorrecto
  *       devuelto por la función.
  */
-void probarDiasDelAgno(const unsigned int agno, const unsigned int valorEsperado);
+void probarDiasDelAgno(unsigned agno, unsigned valorEsperado);
+
 
 /*
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12 y agno > 1582, la fecha formada por
@@ -87,9 +86,9 @@ void probarDiasDelAgno(const unsigned int agno, const unsigned int valorEsperado
  *       negativo, ha informado también acerca del valor incorrecto
  *       devuelto por la función.
  */
-void probarDiaEnElAgno(const unsigned int dia, const unsigned int mes, 
-                       const unsigned int agno,
-                       const unsigned int valorEsperado);
+void probarDiaEnElAgno(unsigned dia, unsigned mes, unsigned agno,
+                       unsigned valorEsperado);
+
 
 /*
  * Pre:  La fecha formada por «diaSigEsperado»/«mesSigEsperado»/«agnoSigEsperado»
@@ -101,9 +100,10 @@ void probarDiaEnElAgno(const unsigned int dia, const unsigned int mes,
  *       negativo, ha informado también acerca del valor incorrecto que devolvió
  *       la función.
  */
-void probarDiaSiguiente(unsigned int dia, unsigned int mes, unsigned int agno,
-        const unsigned int diaSigEsperado, const unsigned int mesSigEsperado,
-        const unsigned int agnoSigEsperado);
+void probarDiaSiguiente(unsigned dia, unsigned mes, unsigned agno,
+                        unsigned diaSigEsperado, unsigned mesSigEsperado,
+                        unsigned agnoSigEsperado);
+   
                         
 /*
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12 y agno >= 1900, la fecha formada por
@@ -118,7 +118,5 @@ void probarDiaSiguiente(unsigned int dia, unsigned int mes, unsigned int agno,
  *       negativo, ha informado también acerca del valor incorrecto
  *       devuelto por la función.
  */
-void probarDiaDeLaSemana(const unsigned int dia, const unsigned int mes, 
-                       const unsigned int agno, const unsigned int valorEsperado);                        
-
-#endif // FECHAS_TEST_H_INCLUDED
+void probarDiaDeLaSemana(unsigned dia, unsigned mes, unsigned agno,
+                         unsigned valorEsperado);

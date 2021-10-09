@@ -1,21 +1,21 @@
-﻿/*************************************************************************
+﻿/*******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
  * Última revisión: 21 de octubre de 2019
  * Resumen: Módulo principal de un programa que hace pruebas unitarias de
  *          las funciones del módulo «calculos».
- ************************************************************************/
+ ******************************************************************************/
 
 #include <iostream>
 #include "calculos-test.hpp"
 using namespace std;
 
 /*
- * Programa que realiza pruebas unitarias de las funciones «esCapicua» y «mcm» del
- * módulo de biblioteca «calculos». En cada prueba, indica los parámetros
+ * Programa que realiza pruebas unitarias de las funciones «esCapicua» y «mcm»
+ * del módulo de biblioteca «calculos». En cada prueba, se indica los parámetros
  * utilizados y si el resultado ha sido correcto o no. Además, en los casos
- * negativos, indica las salidas producidas por la función y las que debería 
- * producir.
+ * negativos, indica las salidas realmente proporcionadas por la función y las
+ * que debería proporcionar.
  */
 int main() {
     probarEsCapicua(0, true);

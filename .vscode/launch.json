@@ -5,6 +5,44 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Depurar proyecto «calculadora»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/calculadora",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "Compilar proyecto «calculadora»"
+        },
+        {
+            "name": "Depurar tests del módulo «calculos»",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/calculos-test",
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Habilitar la impresión con sangría para gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                },
+            ],
+            "preLaunchTask": "Compilar tests del módulo «calculos»"
+        },
+        {
             "name": "Depurar proyecto «calendario»",
             "type": "cppdbg",
             "request": "launch",

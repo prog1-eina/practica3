@@ -1,12 +1,12 @@
-﻿/*************************************************************************
+﻿/*******************************************************************************
  * Curso de Programación 1. Tema 7 y práctica 3
  * Autores originales: Miguel Ángel Latre y Javier Martínez
- * Modificado por: 
- * Última revisión: 18 de octubre de 2019
- * Resumen: Módulo principal de un programa interactivo dirigido por menú
- *          que permite al usuario la realización de algunos cálculos con
- *          datos de tipo entero
- ************************************************************************/
+ * Modificado por: ¡PON AQUÍ TU NOMBRE!
+ * Última revisión: 9 de octubre de 2021
+ * Resumen: Módulo principal de un programa interactivo dirigido por menú que
+ *          permite al usuario la realización de algunos cálculos con datos de
+ *          tipo entero
+ ******************************************************************************/
 
 #include <iostream>
 #include "calculos.hpp"
@@ -15,7 +15,7 @@ using namespace std;
 /*
  * Número de operaciones que ofrece actualmente el menú del programa.
  */
-const int NUM_OPERACIONES = 5;
+const unsigned NUM_OPERACIONES = 5;
 
 /*
  *  Pre:  ---
@@ -40,7 +40,7 @@ void presentarMenu() {
  *        solicitado al usuario que escriba el código de una de ellas y ha
  *        asignado a «operacion» la nueva respuesta del usuario.
  */
-void pedirOrden(int& operacion) {
+void pedirOrden(unsigned& operacion) {
     presentarMenu();
     cout << "Seleccione una operación [0-" << NUM_OPERACIONES << "]: ";
     cin >> operacion;    
@@ -122,9 +122,9 @@ void ejecutarEsPrimo(int numero) {
  *        corresponde con ninguna de las operaciones, escribe en la pantalla un
  *        mensaje de error.
  */
-void ejecutarOrden(int operacion) {
+void ejecutarOrden(unsigned operacion) {
     if (operacion >= 1 && operacion <= NUM_OPERACIONES) {
-        // Se va a ejcutar una operación válida.
+        // Se va a ejecutar una operación válida.
         // En primer lugar se pide al usuario que defina un número entero.
         cout << "Escriba un número entero: ";
         int numero;
@@ -160,7 +160,7 @@ void ejecutarOrden(int operacion) {
  * opción «0».
  */
 int main() {
-    int operacion;
+    unsigned operacion;
     pedirOrden(operacion);
 
     // Itera hasta que el valor de «operacion» sea igual a 0.

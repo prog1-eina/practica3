@@ -1,6 +1,14 @@
 ################################################################################
-## Fichero «Makefile» para el programa «calculadora» y el programa de pruebas
-## del módulo «calculos»
+## Fichero «Makefile» para:
+##  - el programa «calculadora»
+##  - el programa de pruebas del módulo «calculos»
+##
+## Este fichero es más complejo que el «Makefile» del repositorio
+## correspondiente al tema 7
+## (https://github.com/prog1-eina/tema-07-desarrollo-modular/blob/master/Makefile)
+## Sí es objetivo de la asignatura que comprendais los conceptos que se manejan
+## en el «Makefile» del tema 7, pero NO DE ESTE. No obstante, este fichero se
+## encuentra SOBREDOCUMENTADO por si tienes interés en entener cómo está hecho.
 ################################################################################
 
 ################################################################################
@@ -8,16 +16,16 @@
 
 ## DIRECTORIOS
 
-# Variable que define el directorio donde está el código fuente del proyecto
-SOURCE_DIR = src
+# Variable que define el directorio del código fuente del proyecto «calculadora»
+SOURCE_DIR = src/calculadora
 
 # Variable que define el directorio donde está el código fuente de las pruebas 
-# del proyecto
-TEST_DIR = test
+# del módulo «calculos»
+TEST_DIR = test/calculadora
 
 # Variable que define el directorio donde está el código fuente de una 
-# biblioteca para mostar los resultados de las pruebas del proyecto
-TESTING_LIB_DIR = ../testing-prog1
+# biblioteca para mostar los resultados de las pruebas de los programas de pruebas
+TESTING_LIB_DIR = test/testing-prog1
 
 # Variable que define el directorio en el que crear los ficheros intermedios 
 # de compilación
@@ -30,8 +38,8 @@ BIN_DIR = bin
 # directorios en los que pueden hallarse los ficheros de codigo fuente a 
 # compilar, con el objetivo de evitar tenerlos que poner de forma explícita
 # en las reglas. 
-# En este caso, en el directorio de codigo fuente, en el
-# de codigo de pruebas y el de la biblioteca para mostrar resultados de preubas
+# En este caso, son el directorio de codigo fuente («src/calculadora») y el 
+# directorio de código para pruebas («test/calculadora» y «test/testing-prog1»).
 VPATH = $(SOURCE_DIR) $(TEST_DIR) $(TESTING_LIB_DIR)
 
 
@@ -56,21 +64,20 @@ CXX = g++
 #    -I _directorio_:  indica al compilador que, cuando encuentre una cláusula
 #          de inclusión de un fichero, si este no se encuentra en el directorio
 #          actual, busque también en el directorio _dir_. En este caso, los
-#          ficheros de cabecera .hpp pueden estar en «src» o en 
-#          «../testing-prog1».
+#          ficheros de cabecera .hpp pueden estar en «src/calculadora» o en
+#          «test/testing-prog1».
 CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
 
-# Variable definida habitualmente en un fichero «makefile» para definir la lista
-# de ficheros objeto de los que depende el programa principal.
-# En este caso, los ficheros build/calculadora-main.o y build/calculos.o.
+# Variables para definir la lista de ficheros objeto de los que depende el
+# programa principal.
+# En este caso, son los ficheros build/calculadora-main.o y build/calculos.o.
 OBJECTS =  $(addprefix $(BUILD_DIR)/, calculos.o calculadora-main.o)
 
 # Variable que define la lista de ficheros objeto de los que depende el programa
-# de pruebas del módulo «calculos».
-# En este caso, los ficheros «build/calculos-test-main.o», 
+# de pruebas del módulo «calculos»: los ficheros «build/calculos-test-main.o», 
 # «build/calculos-test.o», «build/testing-prog1.o» y «build/calculos.o».
 TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/,calculos-test-main.o \
                     calculos-test.o testing-prog1.o calculos.o)
@@ -87,13 +94,13 @@ all: calculadora
 # Regla para construir el objetivo «calculadora» («calculadora.exe» en Windows).
 # Tiene como prerrequisitos los ficheros «build/calculadora-main.o» y 
 # «build/calculos.o», establecidos a partir de la variable $(OBJECTS) definida 
-# anteriormente. También
-# establece un prerrequisito especial: que el objetivo $(BIN_DIR) (en este caso,
-# el directorio «bin») simplemente exista. Más adelante en el fichero «Makefile»
-# hay reglas para cada uno de los objetivos de la lista $(OBJECTS) y para el
-# objetivo $(BIN_DIR).
-# La receta correspondiente a la regla, establece como compilar los elementos
-# de la lista $(OBJECTS) para generar «calculadora» (o «calculadora.exe»)
+# anteriormente. También establece un prerrequisito especial: que el objetivo 
+# $(BIN_DIR) (en este caso, el directorio «bin») simplemente exista.
+# Más adelante en el fichero «Makefile» hay reglas para cada uno de los 
+# objetivos de la lista $(OBJECTS) y para el objetivo $(BIN_DIR).
+# La receta correspondiente a la regla «calculadora» establece como compilar los
+# elementos de la lista $(OBJECTS) para generar «calculadora» 
+# (o «calculadora.exe»)
 calculadora: $(OBJECTS) | $(BIN_DIR)
 	$(CXX) -g $(OBJECTS) -o $(BIN_DIR)/calculadora 
 
@@ -126,22 +133,22 @@ calculos-test: $(TESTING_OBJECTS) | $(BIN_DIR)
 
 
 # Regla implícita que establece de forma general la forma de generar cualquier
-# objetivo
-# de la carpeta «build» que tenga la extensión «.o»: tiene como prerrequisito
-# un fichero del mismo nombre, pero con la extensión «.cpp», que puede ubicarse
-# en cualquier directorio de la variable $(VPATH). También tiene como
-# prerrequisito especial que exista el directorio «build». Establece como receta
-# ejecutar el programa g++, con los parámetros establecidos en la variable
-# $(CXXFLAGS), compilando el código fuente del fichero con la extensión «.cpp» 
-# (la variable automática $< representa el nombre del fichero correspondiente al
-# primer prerrequisito de la regla) para generar el fichero correspondiente al
-# objetivo de la regla (representado por la variable automática $@). 
+# objetivo de la carpeta «build» que tenga la extensión «.o»: tiene como
+# prerrequisito un fichero del mismo nombre, pero con la extensión «.cpp», que 
+# puede ubicarse en cualquier directorio de la variable $(VPATH). También tiene
+# como prerrequisito especial que exista el directorio «build». Establece como
+# receta ejecutar el programa g++, con los parámetros establecidos en la
+# variable $(CXXFLAGS), compilando el código fuente del fichero con la extensión
+# «.cpp» (la variable automática $< representa el nombre del fichero
+# correspondiente al primer prerrequisito de la regla) para generar el fichero
+# correspondiente al objetivo de la regla (representado por la variable
+# automática $@). 
 $(BUILD_DIR)/%.o: %.cpp | $(BUILD_DIR)
 	$(CXX) $(CXXFLAGS) -c $< -o $@  
 
 # Con reglas simples, hubieran hecho falta cinco reglas distintas, pero muy
-# similares, correspondientes a los cinco ficheros objeto con los que puede 
-# llegar a trabajar este «Makefile».  	
+# similares entre sí, correspondientes a los cinco ficheros objeto con los que
+# puede llegar a trabajar este «Makefile».  	
 
 # Reglas que establecen prerrequisitos adicionales para algunos de los 
 # objetivos. Están representando el hecho de que algunos ficheros objeto 
@@ -152,7 +159,8 @@ $(BUILD_DIR)/calculos-test-main.o: calculos-test.hpp
 $(BUILD_DIR)/calculos-test.o: testing-prog1.hpp calculos.hpp
 $(BUILD_DIR)/testing-prog1.o: testing-prog1.hpp
 
-# Reglas con objetivo pero sin prerrequisitos, que establecen como crear 
+
+# Reglas con objetivo pero sin prerrequisitos, que establecen cómo crear 
 # los directorios bin y build.
 $(BIN_DIR):
 	mkdir $(BIN_DIR)
