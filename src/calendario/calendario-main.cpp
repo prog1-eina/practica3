@@ -11,7 +11,9 @@
  * Nota: Leer el fichero README.md, que contiene  instrucciones para su 
  *       compilación y ejecución.
 \******************************************************************************/
-
+#include <iostream>
+#include <string>
+using namespace std;
 
 /*
  * Pre:  1 ≤ mes ≤ 12
@@ -21,7 +23,7 @@
  *       los temas 9 (vectores) y 10 (cadenas de caracteres).
  */
 void escribirNombreMes(unsigned mes) {
-    const string NOMBRES_MES[NUM_MESES] = { "ENERO",
+    const string NOMBRES_MES[12] = { "ENERO",
             "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO",
             "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE" };
     cout << NOMBRES_MES[mes - 1];
