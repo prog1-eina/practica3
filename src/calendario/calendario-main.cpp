@@ -8,7 +8,7 @@
  *          año es igual o posterior a 1900.
  *          Clase de problemas correspondiente al tema 7 (diseño modular y
  *          descendente) y 3ª práctica.
- * Nota: Leer el fichero README.md, que contiene  instrucciones para su 
+ * Nota: Leer el fichero README.md, que contiene instrucciones para su 
  *       compilación y ejecución.
 \******************************************************************************/
 #include <iostream>

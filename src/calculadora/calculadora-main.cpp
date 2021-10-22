@@ -6,7 +6,7 @@
  * Resumen: Módulo principal de un programa interactivo dirigido por menú que
  *          permite al usuario la realización de algunos cálculos con datos de
  *          tipo entero
- * Nota: Leer el fichero README.md, que contiene  instrucciones para su 
+ * Nota: Leer el fichero README.md, que contiene instrucciones para su 
  *       compilación y ejecución.
  ******************************************************************************/
 

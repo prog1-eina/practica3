@@ -4,7 +4,7 @@
  * Última revisión: 22 de octubre de 2018
  * Resumen: Módulo principal de un programa que hace pruebas unitarias de
  *          las funciones del módulo «fechas».
- * Nota: Leer el fichero README.md, que contiene  instrucciones para su 
+ * Nota: Leer el fichero README.md, que contiene instrucciones para su 
  *       compilación y ejecución.
  ******************************************************************************/
 

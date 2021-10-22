@@ -4,7 +4,7 @@
  * Última revisión: 21 de octubre de 2019
  * Resumen: Módulo principal de un programa que hace pruebas unitarias de
  *          las funciones del módulo «calculos».
- * Nota: Leer el fichero README.md, que contiene  instrucciones para su 
+ * Nota: Leer el fichero README.md, que contiene instrucciones para su 
  *       compilación y ejecución.
  ******************************************************************************/
 
