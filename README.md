@@ -6,7 +6,7 @@ Código fuente de partida para las tareas de la 3ª práctica de Programación 1
 
 Puede clonarse o descargarse en formato ZIP. 
 
-En Visual Stuido Code hay que abrir el directorio ``practica3``.
+En Visual Studio Code hay que abrir el directorio ``practica3``.
 
 Contiene el código de cuatro programas:
 
