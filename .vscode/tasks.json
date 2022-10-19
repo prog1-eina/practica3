@@ -1,11 +1,17 @@
 {
     "tasks": [
         {
+            "label": "Open Terminal",
+            "type": "shell",
+            "command": "osascript -e 'tell application \"Terminal\"\ndo script \"echo hello\"\nend tell'",
+            "problemMatcher": []
+        },
+        {
             "label": "Compilar proyecto «calculadora»",
             "type": "shell",
             "command": "make",
             "windows": {
-                "command": "mingw32-make.exe",
+                "command": "mingw32-make",
             },
             "problemMatcher": ["$gcc"],
             "group": {
@@ -18,7 +24,7 @@
             "type": "shell",
             "command": "bin/calculadora",
             "windows": {
-                "command": "chcp 65001 ; bin\\calculadora.exe",
+                "command": "chcp 65001 ; bin\\calculadora",
             },
             "dependsOn": "Compilar proyecto «calculadora»",
             "problemMatcher": ["$gcc"],
