@@ -1,4 +1,4 @@
-﻿/*******************************************************************************
+﻿/******************************************************************************\
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
  * Última revisión: 21 de octubre de 2019
@@ -6,7 +6,7 @@
  *          las funciones del módulo «calculos».
  * Nota: Leer el fichero README.md, que contiene instrucciones para su 
  *       compilación y ejecución.
- ******************************************************************************/
+\******************************************************************************/
 
 #include <iostream>
 #include "calculos-test.hpp"

@@ -1,4 +1,4 @@
-﻿/*******************************************************************************
+﻿/******************************************************************************\
  * Curso de Programación 1. Prácticas
  * Autores: Miguel Ángel Latre
  * Última revisión: 8 de octubre de 2021
@@ -13,7 +13,7 @@
  *          correspondientes a pruebas en las que se detectan errores). Es por
  *          ello que hay mucho código repetido, ya que las estructuras
  *          de las funciones se repiten.
- ******************************************************************************/
+\******************************************************************************/
 
 #include <string>
 using namespace std;

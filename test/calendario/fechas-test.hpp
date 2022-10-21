@@ -1,11 +1,11 @@
-﻿/*******************************************************************************
+﻿/******************************************************************************\
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
  * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de interfaz de un módulo auxiliar «pruebas»
  *          que hace pruebas unitarias de las funciones del módulo
  *          «fechas».
- ******************************************************************************/
+\******************************************************************************/
 
 #pragma once
 
