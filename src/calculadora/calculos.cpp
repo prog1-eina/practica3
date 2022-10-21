@@ -1,22 +1,22 @@
-﻿/*************************************************************************
+﻿/*******************************************************************************
  * Curso de Programación 1. Tema 7 y práctica 3
- * Autores: Miguel Ángel Latre y Javier Martínez (esqueleto inicial)
+ * Autores originales: Miguel Ángel Latre y Javier Martínez (esqueleto inicial)
  * Modificado por: ¡PON AQUÍ TU NOMBRE! (funciones establecidas en la práctica 3)
  * Última revisión: 23 de octubre de 2020
  * Resumen: Fichero calculos.cpp de implementación del módulo de biblioteca
  *          «calculos» que facilita algunas funciones para trabajar con
  *          datos de tipo entero.
  *          Versión específica de la práctica 3.
-\************************************************************************/
+ ******************************************************************************/
 
 /*
  * Pre:  ---
- * Post: Ha devuelto el número de cifras de «n» cuando este se escribe en
+ * Post: Devuelve el número de cifras de «n» cuando este se escribe en
  *       base 10.
  */
 unsigned numCifras(int n) {
     unsigned cuenta = 1;      // lleva la cuenta de las cifras identificadas
-    n = n / 10;             // elimina la cifra menos significativa de «n»
+    n = n / 10;               // elimina la cifra menos significativa de «n»
     while (n != 0) {
         // El valor de <cuenta> es igual al de cifras identificadas en «n»
         cuenta++;       // contabiliza la cifra menos significativa de «n»
@@ -28,7 +28,7 @@ unsigned numCifras(int n) {
 
 /*
  * Pre:  ---
- * Post: Ha devuelto la suma de las cifras de «n» cuando «n» se escribe en
+ * Post: Devuelve la suma de las cifras de «n» cuando «n» se escribe en
  *       base 10.
  */
 unsigned sumaCifras(int n) {
@@ -46,7 +46,7 @@ unsigned sumaCifras(int n) {
 
 /*
  *  Pre:  i ≥ 1
- *  Post: Ha devuelto la «i»-ésima cifra menos significativa de «n» cuando
+ *  Post: Devuelve la «i»-ésima cifra menos significativa de «n» cuando
  *        «n» se escribe en base 10.
  */
 unsigned cifra(int n, unsigned i) {
@@ -62,7 +62,7 @@ unsigned cifra(int n, unsigned i) {
 
 /*
  *  Pre:  ---
- *  Post: Ha devuelto el número que escrito en base 10 es la imagen
+ *  Post: Devuelve el número que escrito en base 10 es la imagen
  *        especular de «n» cuando «n» se escribe también en base 10.
  */
 int imagen(int n) {
@@ -95,7 +95,7 @@ int imagen(int n) {
 
 /*
  *  Pre:  ---
- *  Post: Ha devuelto el factorial de «n».
+ *  Post: Devuelve el factorial de «n».
  */
 unsigned factorial(unsigned n) {
     int factorial = 1;      //  factorial = 0!
@@ -111,7 +111,7 @@ unsigned factorial(unsigned n) {
 
 /*
  *  Pre:  ---
- *  Post: Ha devuelto true si y solo si «n» es un número primo.
+ *  Post: Devuelve true si y solo si «n» es un número primo.
  */
 bool esPrimo(unsigned n) {
     if (n == 2) {
@@ -140,7 +140,7 @@ bool esPrimo(unsigned n) {
 
 /*
  *  Pre: a ≠ 0 o b ≠ 0
- *  Post: Ha devuelto el máximo común divisor de <a> y <b>.
+ *  Post: Devuelve el máximo común divisor de <a> y <b>.
  */
 unsigned mcd(int a, int b) {
     // Algoritmo de Euclides para el cálculo del mcd

@@ -19,7 +19,7 @@ using namespace std;
 /*
  * Pre:  «valorEsperado» es true si y solo si «n» es un número capicúa.
  * Post: Ha escrito un mensaje en pantalla informando acerca de si la función
- *       «esCapicua», invocada con el argumento «n», ha devuelto el valor
+ *       «esCapicua», invocada con el argumento «n», Devuelve el valor
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que devolvió la función.
  */
@@ -31,7 +31,7 @@ void probarEsCapicua(int n, bool valorEsperado) {
 /*
  * Pre:  «valorEsperado» es el mínimo común múltiplo de «n» y «m».
  * Post: Ha escrito un mensaje en pantalla informando acerca de si la función
- *       «mcm», invocada con los argumentos «n» y «m», ha devuelto el valor
+ *       «mcm», invocada con los argumentos «n» y «m», Devuelve el valor
  *       correcto «valorEsperado». En caso negativo, ha informado
  *       también acerca del valor incorrecto que devolvió la función.
  */

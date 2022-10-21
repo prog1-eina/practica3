@@ -76,7 +76,7 @@ void probarDescomponer(unsigned fecha,
  *       correspondiente al parámetro «agno».
  * Post: Ha escrito un mensaje en pantalla informando acerca de si la
  *       función «diasDelMes», invocada con los argumentos «mes» y «agno»,
- *       ha devuelto el valor correcto «valorEsperado». En caso negativo,
+ *       Devuelve el valor correcto «valorEsperado». En caso negativo,
  *       ha informado también acerca del valor incorrecto devuelto por
  *       la función.
  */
@@ -92,7 +92,7 @@ void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado) {
  *       año «agno».
  * Post: Ha escrito un mensaje en pantalla informando acerca de si la
  *       función «diasDelAgno», invocada con el argumento
- *       «agno», ha devuelto el valor correcto «valorEsperado». En caso
+ *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, ha informado también acerca del valor incorrecto
  *       devuelto por la función.
  */
@@ -109,7 +109,7 @@ void probarDiasDelAgno(unsigned agno, unsigned valorEsperado) {
  *       «valorEsperado» es el número de día del año de esa fecha.
  * Post: Ha escrito un mensaje en pantalla informando acerca de si la
  *       función «diaEnElAgno», invocada con los argumentos «dia», «mes» y
- *       «agno», ha devuelto el valor correcto «valorEsperado». En caso
+ *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, ha informado también acerca del valor incorrecto
  *       devuelto por la función.
  */
@@ -211,7 +211,7 @@ void escribirDiaSemana(unsigned diaSemana) {
  *       codifica martes y así sucesivamente hasta el 6, que codifica el domingo.
  * Post: Ha escrito un mensaje en pantalla informando acerca de si la
  *       función «diaDeLaSemana», invocada con los argumentos «dia», «mes» y
- *       «agno», ha devuelto el valor correcto «valorEsperado». En caso
+ *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, ha informado también acerca del valor incorrecto
  *       devuelto por la función.
  */
@@ -223,9 +223,9 @@ void probarDiaDeLaSemana(unsigned dia, unsigned mes, unsigned agno,
         cout << "correcta." << endl;
     } else {
         cout << "incorrecta:" << endl;
-        cout << "   debería haber devuelto ";
+        cout << "   debería devolver ";
         escribirDiaSemana(valorEsperado);
-        cout << ", pero ha devuelto ";
+        cout << ", pero devuelve ";
         escribirDiaSemana(valorDevuelto);
         cout << '.' << endl;
     }

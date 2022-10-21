@@ -114,5 +114,12 @@ int main() {
     probarDiaDeLaSemana( 3, 11, 2019, DOMINGO);
     probarDiaDeLaSemana( 4, 11, 2019, LUNES);
 
+    probarDiaDeLaSemana(28,  2, 2100, DOMINGO);
+    probarDiaDeLaSemana( 1,  3, 2100, LUNES);
+    
+    probarDiaDeLaSemana(28,  2, 2400, LUNES);
+    probarDiaDeLaSemana(29,  2, 2400, MARTES);
+    probarDiaDeLaSemana( 1,  3, 2400, MIERCOLES);
+
     return 0;
 }

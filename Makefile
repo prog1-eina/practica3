@@ -79,8 +79,8 @@ OBJECTS =  $(addprefix $(BUILD_DIR)/, calculos.o calculadora-main.o)
 # Variable que define la lista de ficheros objeto de los que depende el programa
 # de pruebas del módulo «calculos»: los ficheros «build/calculos-test-main.o», 
 # «build/calculos-test.o», «build/testing-prog1.o» y «build/calculos.o».
-TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/,calculos-test-main.o \
-                    calculos-test.o testing-prog1.o calculos.o)
+TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/, calculos.o calculos-test-main.o \
+                    calculos-test.o testing-prog1.o)
 
 ################################################################################
 ## Reglas del fichero «Makefile»

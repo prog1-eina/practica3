@@ -67,6 +67,7 @@ int main() {
     probarMcm(10, -15, 30);
     probarMcm(-10, -15, 30);
     probarMcm(41273, 80758, 22369966);
+    probarMcm(41273, 161516, 44739932);
 
     return 0;
 }

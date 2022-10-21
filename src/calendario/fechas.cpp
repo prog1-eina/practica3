@@ -6,7 +6,7 @@
  * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de implementación de un módulo «fechas» que ofrece
  *          funciones para trabajar con fechas del calendario
-\******************************************************************************/
+ ******************************************************************************/
 
 #include "fechas.hpp"
 
@@ -44,7 +44,7 @@ void descomponer(unsigned f,
  *       tienen la forma «aaaammdd», donde los dígitos «aaaa» representan
  *       el año, los dígitos «mm», el mes y los dígitos «dd» el día de
  *       sendas fechas del calendario gregoriano.
- * Post: Ha devuelto true si y solo si la fecha representada por el valor
+ * Post: Devuelve true si y solo si la fecha representada por el valor
  *       del parámetro «f1» es anterior a la representada por «f2».
  */
 bool esAnterior(unsigned f1, unsigned f2) {
@@ -54,7 +54,7 @@ bool esAnterior(unsigned f1, unsigned f2) {
 
 /*
  * Pre:  agno > 1582.
- * Post: Ha devuelto true si y solo si el año «agno» es bisiesto de
+ * Post: Devuelve true si y solo si el año «agno» es bisiesto de
  *       acuerdo con las reglas del calendario gregoriano.
  */
 bool esBisiesto(unsigned agno) {
@@ -67,7 +67,7 @@ bool esBisiesto(unsigned agno) {
 
 /*
  * Pre:  1 ≤ mes ≤ 12 y agno > 1582.
- * Post: Ha devuelto el número de días del mes correspondiente al parámetro «mes»
+ * Post: Devuelve el número de días del mes correspondiente al parámetro «mes»
  *       del año correspondiente al parámetro «agno».
  *       Por ejemplo: diasDelMes(10, 2018) devuelve 31,
  *                    diasDelMes(2, 2018) devuelve 28 y
@@ -80,7 +80,7 @@ unsigned diasDelMes(unsigned mes, unsigned agno) {
 
 /*
  * Pre:  agno > 1582.
- * Post: Ha devuelto el número de días que tiene el año «agno».
+ * Post: Devuelve el número de días que tiene el año «agno».
  *       Por ejemplo: diasDelAgno(2018) devuelve 365 y
  *                    diasDelAgno(2020) devuelve 366.
  */
@@ -92,7 +92,7 @@ unsigned diasDelAgno(unsigned agno) {
 /*
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12 y agno > 1582 y la fecha formada por
  *       «dia/mes/agno» es una fecha válida del calendario gregoriano.
- * Post: Ha devuelto el número de día del año de la fecha formada por
+ * Post: Devuelve el número de día del año de la fecha formada por
  *       «dia/mes/agno».
  *       Por ejemplo: diaEnElAgno(1, 1, 2019) devuelve 1;
  *                    diaEnElAgno(31, 12, 2018) devuelve 365;
@@ -129,7 +129,7 @@ void diaSiguiente(unsigned& dia, unsigned& mes, unsigned& agno) {
  * Pre:  Los valores de los parámetros «dia», «mes» y «agno» representan
  *       conjuntamente una fecha válida del calendario gregoriano igual o
  *       posterior al 1 de enero de 1900.
- * Post: Ha devuelto un entero que codifica el día de la semana de la fecha
+ * Post: Devuelve un entero que codifica el día de la semana de la fecha
  *       representada por los valores de los parámetros «dia», «mes» y «agno», de
  *       acuerdo con la siguiente codificación: el 0 codifica el lunes, el 1
  *       codifica martes y así sucesivamente hasta el 6, que codifica el domingo.
