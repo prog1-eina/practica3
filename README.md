@@ -11,24 +11,28 @@ En Visual Studio Code hay que abrir el directorio ``practica3``.
 Contiene el código de cuatro programas:
 
 1. Programa ``calculadora``. Para compilarlo y ejecutarlo desde la terminal en Linux y macOS:
+
     ```
     make 
     bin/calculadora
     ```
 
 2. Programa de pruebas ``calculos-test``. Para compilarlo y ejecutarlo desde la terminal en Linux y macOS:
+
     ```
     make calculos-test
     bin/calculos-test
     ```
 
 3. Programa ``calendario``. Para compilarlo y ejecutarlo desde la terminal en Linux y macOS:
+
     ```
     make calendario -f calendario.mk
     bin/calendario
     ```
 
 4. Programa de pruebas ``fechas-test``. Para compilarlo y ejecutarlo desde la terminal en Linux y macOS:
+
     ```
     make fechas-test -f calendario.mk
     bin/fechas-test
