@@ -14,10 +14,10 @@ using namespace std;
 
 /*
  * Programa que realiza pruebas unitarias de las funciones «esCapicua» y «mcm»
- * del módulo de biblioteca «calculos». En cada prueba, se indica los parámetros
- * utilizados y si el resultado ha sido correcto o no. Además, en los casos
- * negativos, indica las salidas realmente proporcionadas por la función y las
- * que debería proporcionar.
+ * del módulo de biblioteca «calculos». En cada prueba, se indican los
+ * parámetros utilizados y si el resultado es correcto o no. Además, en los
+ * casos negativos, indica las salidas realmente proporcionadas por la función y
+ * las que debería proporcionar.
  */
 int main() {
     probarEsCapicua(0, true);

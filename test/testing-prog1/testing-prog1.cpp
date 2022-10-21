@@ -35,10 +35,10 @@ const string ESCAPE_NORMAL = "\033[0m";
  * Pre:  En la línea actual de la pantalla se ha escrito un texto anunciando que
  *       se ha realizado una prueba de una determinada función con unos
  *       determinados argumentos.
- * Post: Si los valores de «valorEsperado» y «valorCalculado» son iguales, ha
- *       completado un mensaje en la pantalla informando de que la prueba ha
- *       sido correcta. En caso contrario, indica que ha sido incorrecta y ha
- *       informado también de los valores de «valorEsperado» y «valorCalculado».
+ * Post: Si los valores de «valorEsperado» y «valorCalculado» son iguales,
+ *       completa un mensaje en la pantalla informando de que la prueba es
+ *       correcta. En caso contrario, indica que es incorrecta e informa también
+ *       de los valores de «valorEsperado» y «valorCalculado».
  */
 
 /*
