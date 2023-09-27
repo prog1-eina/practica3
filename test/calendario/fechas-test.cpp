@@ -57,8 +57,7 @@ void probarDescomponer(unsigned fecha,
     if (diaCalculado == diaEsperado && mesCalculado == mesEsperado &&
         agnoCalculado == agnoEsperado) {
         cout << "correcta" << endl;
-    }
-    else {
+    } else {
         cout << "incorrecta:" << endl;
         cout << "   debería haber calculado "
              << "dia=" << diaEsperado << ", mes=" << mesEsperado << " y anyo="
@@ -195,8 +194,7 @@ void escribirDiaSemana(unsigned diaSemana) {
     }
     else if (diaSemana == 6) {
         cout << " (domingo)";
-    }
-    else {
+    } else {
         cout << diaSemana << " (no se corresponde con ningún código válido [0-6])";
     }
 }

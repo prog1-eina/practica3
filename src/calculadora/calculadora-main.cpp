@@ -85,8 +85,7 @@ void ejecutarExtraerCifra(int numero) {
     if (posicion >= 1) {
         cout << "La cifra situada en la posición " << posicion << " del número " 
              << numero << " es " << cifra(numero, posicion) << "." << endl;
-    }
-    else {
+    } else {
         cout << "La posición tiene que ser mayor que 0." << endl;
     }
 }
@@ -147,8 +146,7 @@ void ejecutarOrden(unsigned operacion) {
         else if (operacion == 5) {
             ejecutarEsPrimo(numero);
         }
-    }
-    else {
+    } else {
         // El código de operación no es válido
         cout << "Opción desconocida" << endl;
     }

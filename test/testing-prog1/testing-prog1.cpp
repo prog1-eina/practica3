@@ -47,8 +47,7 @@ const string ESCAPE_NORMAL = "\033[0m";
 void escribirResultadoPrueba(const int valorEsperado, const int valorCalculado) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
-    }
-    else {
+    } else {
         cout << "incorrecta:" << endl;
         cout << ESCAPE_ROJO;
         cout << "   debería haber obtenido " 
@@ -69,8 +68,7 @@ void escribirResultadoPrueba(const unsigned valorEsperado,
                              const unsigned valorCalculado) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
-    }
-    else {
+    } else {
         cout << "incorrecta:" << endl;
         cout << ESCAPE_ROJO;
         cout << "   debería haber obtenido " 
@@ -90,8 +88,7 @@ void escribirResultadoPrueba(const unsigned valorEsperado,
 void escribirResultadoPrueba(const bool valorEsperado, const bool valorCalculado) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
-    }
-    else {
+    } else {
         cout << boolalpha;
         cout << "incorrecta:" << endl;
         cout << ESCAPE_ROJO;
@@ -112,8 +109,7 @@ void escribirResultadoPrueba(const double valorEsperado,
                              const double valorCalculado) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
-    }
-    else {
+    } else {
         cout << "incorrecta:" << endl;
         cout << ESCAPE_ROJO;
         cout << "   debería haber obtenido " 
@@ -134,8 +130,7 @@ void escribirResultadoPrueba(const char valorEsperado,
                              const char valorCalculado) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
-    }
-    else {
+    } else {
         cout << "incorrecta:" << endl;
         cout << ESCAPE_ROJO;
         cout << "   debería haber obtenido " 
@@ -155,8 +150,7 @@ void escribirResultadoPrueba(const string valorEsperado,
                              const string valorCalculado) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
-    }
-    else {
+    } else {
         cout << "incorrecta:" << endl;
         cout << ESCAPE_ROJO;
         cout << "   debería haber obtenido " 
