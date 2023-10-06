@@ -133,17 +133,13 @@ void ejecutarOrden(unsigned operacion) {
 
         if (operacion == 1) {
             ejecutarNumCifras(numero);
-        }
-        else if (operacion == 2) {
+        } else if (operacion == 2) {
             ejecutarSumaCifras(numero);
-        }
-        else if (operacion == 3) {
+        } else if (operacion == 3) {
             ejecutarExtraerCifra(numero);
-        }
-        else if (operacion == 4) {
+        } else if (operacion == 4) {
             ejecutarImagenEspecular(numero);
-        }
-        else if (operacion == 5) {
+        } else if (operacion == 5) {
             ejecutarEsPrimo(numero);
         }
     } else {

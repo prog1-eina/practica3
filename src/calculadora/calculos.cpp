@@ -115,8 +115,7 @@ unsigned factorial(unsigned n) {
 bool esPrimo(unsigned n) {
     if (n == 2) {
         return true;      // «n» es igual a 2, luego es primo.
-    }
-    else if (n < 2 || n % 2 == 0) {
+    } else if (n < 2 || n % 2 == 0) {
         return false;     // «n» es menor que 2 o par mayor que 2.
     } else {
         // Se buscan posibles divisores impares de «n» a partir del 3:

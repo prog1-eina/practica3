@@ -176,23 +176,17 @@ void escribirDiaSemana(unsigned diaSemana) {
     cout << diaSemana;
     if (diaSemana == 0) {
         cout << " (lunes)";
-    }
-    else if (diaSemana == 1) {
+    } else if (diaSemana == 1) {
         cout << " (martes)";
-    }
-    else if (diaSemana == 2) {
+    } else if (diaSemana == 2) {
         cout << " (miércoles)";
-    }
-    else if (diaSemana == 3) {
+    } else if (diaSemana == 3) {
         cout << " (jueves)";
-    }
-    else if (diaSemana == 4) {
+    } else if (diaSemana == 4) {
         cout << " (viernes)";
-    }
-    else if (diaSemana == 5) {
+    } else if (diaSemana == 5) {
         cout << " (sábado)";
-    }
-    else if (diaSemana == 6) {
+    } else if (diaSemana == 6) {
         cout << " (domingo)";
     } else {
         cout << diaSemana << " (no se corresponde con ningún código válido [0-6])";
