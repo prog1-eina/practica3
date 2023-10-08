@@ -8,6 +8,7 @@
  *          datos de tipo entero.
  *          Versión específica de la práctica 3.
 \******************************************************************************/
+#include <cstdlib>
 
 /*
  * Pre:  ---
@@ -32,10 +33,8 @@ unsigned numCifras(int n) {
  *       base 10.
  */
 unsigned sumaCifras(int n) {
-    if (n < 0) {
-        n = -n;                 // si «n» es negativo, le cambia el signo
-    }
-    unsigned suma = 0;      // suma de las cifras eliminadas de «n»
+    n = abs(n);                 // si «n» es negativo, le cambia el signo    
+    unsigned suma = 0;          // suma de las cifras eliminadas de «n»
     while (n != 0) {
         suma = suma + n % 10;   // suma la cifra menos significativa de «n»
         n = n / 10;             // y la elimina de «n»
@@ -50,11 +49,9 @@ unsigned sumaCifras(int n) {
  *        «n» se escribe en base 10.
  */
 unsigned cifra(int n, unsigned i) {
-    if (n < 0) {
-        n = -n;             // si «n» es negativo, le cambia el signo
-    }
+    n = abs(n);                 // si «n» es negativo, le cambia el signo    
     for (unsigned exp = 1; exp < i; exp++) {
-        n = n / 10;         // elimina la cifra menos significativa de «n»
+        n = n / 10;             // elimina la cifra menos significativa de «n»
     }
     return n % 10;
 }
@@ -68,9 +65,7 @@ unsigned cifra(int n, unsigned i) {
 int imagen(int n) {
     // «negativo» memoriza si «n» es, inicialmente, positivo o negativo.
     bool negativo = n < 0;
-    if (n < 0) {
-        n = -n;                  // si «n» es negativo, le cambia el signo
-    }
+    n = abs(n);                 // si «n» es negativo, le cambia el signo    
 
     // Variable para el cálculo de la imagen especular de «n»
     int resultado = 0;
@@ -141,12 +136,8 @@ bool esPrimo(unsigned n) {
  */
 unsigned mcd(int a, int b) {
     // Algoritmo de Euclides para el cálculo del mcd
-    if (a < 0) {
-        a = -a;
-    }
-    if (b < 0) {
-        b = -b;
-    }
+    a = abs(a);
+    b = abs(b);
     
     while (b != 0) {
         int resto = a % b;

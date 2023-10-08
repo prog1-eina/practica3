@@ -21,7 +21,7 @@ const unsigned NUM_OPERACIONES = 5;
 
 /*
  *  Pre:  ---
- *  Post: Ha presentado en la pantalla el menú de opciones disponibles.
+ *  Post: Presenta en la pantalla el menú de opciones disponibles.
  */
 void presentarMenu() {
     cout << endl;
@@ -38,7 +38,7 @@ void presentarMenu() {
 
 /*
  *  Pre:  ---
- *  Post: Ha presentado en la pantalla el menú de opciones disponibles, ha
+ *  Post: Presenta en la pantalla el menú de opciones disponibles, ha
  *        solicitado al usuario que escriba el código de una de ellas y ha
  *        asignado a «operacion» la nueva respuesta del usuario.
  */
@@ -51,7 +51,7 @@ void pedirOrden(unsigned& operacion) {
 
 /*
  * Pre:  ---
- * Post: Ha ejecutado la 1ª orden, informando del número de cifras de «numero».
+ * Post: Ejecuta la 1ª orden, informando del número de cifras de «numero».
  */
 void ejecutarNumCifras(int numero) {
     cout << "El número " << numero << " tiene " << numCifras(numero) << " cifras."
@@ -61,7 +61,7 @@ void ejecutarNumCifras(int numero) {
 
 /*
  * Pre:  ---
- * Post: Ha ejecutado la 2ª orden, informando de la suma de las cifras de
+ * Post: Ejecuta la 2ª orden, informando de la suma de las cifras de
  *       «numero».
  */
 void ejecutarSumaCifras(int numero) {
@@ -72,7 +72,7 @@ void ejecutarSumaCifras(int numero) {
 
 /*
  * Pre:  ---
- * Post: Ha ejecutado la 3ª orden, informando del valor de la cifra de «numero»
+ * Post: Ejecuta la 3ª orden, informando del valor de la cifra de «numero»
  *       ubicada en la posición especificada por el usuario.
  */
 void ejecutarExtraerCifra(int numero) {
@@ -93,7 +93,7 @@ void ejecutarExtraerCifra(int numero) {
 
 /*
  * Pre:  ---
- * Post: Ha ejecutado la 4ª orden, informando del valor de la imagen especular de
+ * Post: Ejecuta la 4ª orden, informando del valor de la imagen especular de
  * «numero».
  */
 void ejecutarImagenEspecular(int numero) {
@@ -104,7 +104,7 @@ void ejecutarImagenEspecular(int numero) {
 
 /*
  * Pre:  ---
- * Post: Ha ejecutado la 5ª orden, informando sobre si «numero» es un número primo
+ * Post: Ejecuta la 5ª orden, informando sobre si «numero» es un número primo
  *       o no lo es.
  */
 void ejecutarEsPrimo(int numero) {
@@ -118,7 +118,7 @@ void ejecutarEsPrimo(int numero) {
 
 /*
  *  Pre:  ---
- *  Post: Ha ejecutado las acciones asociadas a la orden cuyo código es
+ *  Post: Ejecuta las acciones asociadas a la orden cuyo código es
  *        igual al valor del parámetro «operacion». Si «operacion» no se
  *        corresponde con ninguna de las operaciones, escribe en la pantalla un
  *        mensaje de error.

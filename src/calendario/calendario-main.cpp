@@ -17,7 +17,7 @@ using namespace std;
 
 /*
  * Pre:  1 ≤ mes ≤ 12
- * Post: Ha escrito en la pantalla el nombre (en mayúsculas) del mes
+ * Post: Escribe en la pantalla el nombre (en mayúsculas) del mes
  *       correspondiente al valor del parámetro «mes».
  * Nota: Este código lo podrás comprender adecuadamente cuando hayamos visto
  *       los temas 9 (vectores) y 10 (cadenas de caracteres).

@@ -24,7 +24,7 @@ using namespace std;
  * Especificación común a TODAS las funciones definidas en este fichero de
  * cabecera
  * 
- * Pre:  En la línea actual de la pantalla se ha escrito un texto anunciando que
+ * Pre:  En la línea actual de la pantalla se escribe un texto anunciando que
  *       se ha realizado una prueba de una determinada función con unos
  *       determinados argumentos.
  * Post: Si los valores de «valorEsperado» y «valorCalculado» son iguales, 

@@ -10,9 +10,6 @@
             "label": "Compilar proyecto «calculadora»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "problemMatcher": ["$gcc"],
             "group": {
                 "kind": "build",
@@ -33,9 +30,6 @@
             "label": "Compilar tests del módulo «calculos»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "args": [
                 "calculos-test"
             ],
@@ -56,9 +50,6 @@
             "label": "Compilar proyecto «calendario»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "args": [
                 "calendario", "-f", "calendario.mk"
             ],
@@ -79,9 +70,6 @@
             "label": "Compilar tests del módulo «fechas»",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make",
-            },
             "args": [
                 "fechas-test", "-f", "calendario.mk"
             ],
@@ -102,9 +90,6 @@
             "label": "Limpiar resultados de compilación",
             "type": "shell",
             "command": "make",
-            "windows": {
-                "command": "mingw32-make.exe",
-            },
             "args": [
                 "clean"
             ],
