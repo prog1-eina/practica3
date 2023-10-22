@@ -115,6 +115,11 @@ void ejecutarEsPrimo(int numero) {
     cout << " es primo." << endl;
 }
 
+/*
+ * Pre:  ---
+ * Post: Ejecuta la 6ª orden, devuelve el factorial del número si es natural.
+ */
+void ejecutar
 
 /*
  *  Pre:  ---
