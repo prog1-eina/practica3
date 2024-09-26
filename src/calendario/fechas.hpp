@@ -25,7 +25,7 @@ const unsigned AGNO_INICIAL = 1900;
  *       día.
  */
 void componer(unsigned dia, unsigned mes, unsigned agno,
-              unsigned& f);
+              unsigned &f);
 
 
 /*
@@ -37,7 +37,7 @@ void componer(unsigned dia, unsigned mes, unsigned agno,
  *       respectivamente, al día, al mes y al año de la fecha «f».
  */
 void descomponer(unsigned f,
-                 unsigned& dia, unsigned& mes, unsigned& agno);
+                 unsigned &dia, unsigned &mes, unsigned &agno);
 
 
 /*
@@ -67,7 +67,7 @@ bool esAnterior(unsigned f1, unsigned f2);
  *       Si los valores fueran d = 31, m = 12 y a = 2022, tras la invocación
  *       diaSiguiente(d, m, a) los valores serían d = 1, m = 1 y a = 2023.
  */
-void diaSiguiente(unsigned& dia, unsigned& mes, unsigned& agno);
+void diaSiguiente(unsigned &dia, unsigned &mes, unsigned &agno);
 
 
 /*

@@ -42,7 +42,7 @@ void presentarMenu() {
  *        solicitado al usuario que escriba el código de una de ellas y ha
  *        asignado a «operacion» la nueva respuesta del usuario.
  */
-void pedirOrden(unsigned& operacion) {
+void pedirOrden(unsigned &operacion) {
     presentarMenu();
     cout << "Seleccione una operación [0-" << NUM_OPERACIONES << "]: ";
     cin >> operacion;    
