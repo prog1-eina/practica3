@@ -27,14 +27,63 @@ using namespace std;
  *       «agno», calcula el valor correcto «valorEsperado». En caso
  *       negativo, informa también acerca del valor incorrecto que calculó
  *       la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarComponer(unsigned dia, unsigned mes, unsigned agno, 
-                    unsigned valorEsperado) {
+                    unsigned valorEsperado, bool &todoOk) {
     cout << "Prueba componer(" << dia << ", " << mes << ", " << agno
          << ", int&) ";
     unsigned valorCalculado;
     componer(dia, mes, agno, valorCalculado);
-    escribirResultadoPrueba(valorEsperado, valorCalculado);
+    escribirResultadoPrueba(valorEsperado, valorCalculado, todoOk);
+}
+
+
+
+/*
+ * Pre:  ---
+ * Post: Escribe en la pantalla mensaje "dia = «dia», mes = «mes» y agno = «agno»",
+ *       donde «dia», «mes» y «agno» son los valores de los parámetros. Lo hace con
+ *       color rojo y, en el caso de los valores de los parámetros, además con
+ *       negrita.
+ */
+void escribirDiaEnMensajeError(unsigned dia, unsigned mes, unsigned agno) {
+    cout << ESCAPE_NORMAL << ESCAPE_ROJO << "dia = "
+         << ESCAPE_ROJO_NEGRITA          << dia 
+         << ESCAPE_NORMAL << ESCAPE_ROJO << ", mes = " 
+         << ESCAPE_ROJO_NEGRITA          << mes 
+         << ESCAPE_NORMAL << ESCAPE_ROJO << ", agno = " 
+         << ESCAPE_ROJO_NEGRITA << agno
+         << ESCAPE_NORMAL;
+}
+
+
+/*
+ * Pre:  ---
+ * Post: Si los valores de los parámetros «dia», «mes» y «agno» son iguales a los
+ *       correspondientes valores esperados, completa la línea actual en la pantalla
+ *       informando de que la prueba es correcta. En caso contrario, indica que es
+ *       incorrecta e informa también de los valores obtenidos y esperados.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
+ */
+void escribirResultadoPrueba(unsigned dia, unsigned mes, unsigned agno,
+        unsigned diaEsperado, unsigned mesEsperado, unsigned agnoEsperado,
+        bool &todoOk) {
+    if (dia == diaEsperado && mes == mesEsperado && agno == agnoEsperado) {
+        cout << "correcta." << endl;
+    } else {
+        todoOk = false;
+        cout << "incorrecta:" << endl;
+        cout << ESCAPE_ROJO << "   debería haber obtenido ";
+        escribirDiaEnMensajeError(diaEsperado, mesEsperado, agnoEsperado);
+        cout << ESCAPE_ROJO << ", " << endl;
+        cout << "         pero ha obtenido ";
+        escribirDiaEnMensajeError(dia, mes, agno);
+        cout << ESCAPE_ROJO << '.' << endl;
+        cout << ESCAPE_NORMAL;
+    }
 }
 
 
@@ -48,24 +97,16 @@ void probarComponer(unsigned dia, unsigned mes, unsigned agno,
  *       calculado los valores correctos de día, mes y año. En caso negativo, ha
  *       informado también acerca de los valores incorrectos que calculó la
  *       función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDescomponer(unsigned fecha, 
-            unsigned diaEsperado, unsigned mesEsperado, unsigned agnoEsperado) {
+            unsigned diaEsperado, unsigned mesEsperado, unsigned agnoEsperado, bool &todoOk) {
     cout << "Prueba descomponer(" << fecha << ", int&, int&, int&) ";
     unsigned diaCalculado, mesCalculado, agnoCalculado;
     descomponer(fecha, diaCalculado, mesCalculado, agnoCalculado);
-    if (diaCalculado == diaEsperado && mesCalculado == mesEsperado &&
-        agnoCalculado == agnoEsperado) {
-        cout << "correcta" << endl;
-    } else {
-        cout << "incorrecta:" << endl;
-        cout << "   debería haber calculado "
-             << "dia=" << diaEsperado << ", mes=" << mesEsperado << " y anyo="
-             << agnoEsperado << endl
-             << "   pero ha calculado "
-             << "dia=" << diaCalculado << ", mes=" << mesCalculado << " y anyo="
-             << agnoCalculado << endl;
-    }
+    escribirResultadoPrueba(diaCalculado, mesCalculado, agnoCalculado,
+                            diaEsperado, mesEsperado, agnoEsperado, todoOk);
 }
 
 
@@ -78,11 +119,13 @@ void probarDescomponer(unsigned fecha,
  *       Devuelve el valor correcto «valorEsperado». En caso negativo,
  *       informa también acerca del valor incorrecto devuelto por
  *       la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado) {
+void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado, bool &todoOk) {
     cout << "Prueba diasDelMes(" << mes << ", " << agno << ") ";
     unsigned valorDevuelto = diasDelMes(mes, agno);
-    escribirResultadoPrueba(valorEsperado, valorDevuelto);
+    escribirResultadoPrueba(valorEsperado, valorDevuelto, todoOk);
 }
 
 
@@ -94,11 +137,13 @@ void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado) {
  *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, informa también acerca del valor incorrecto
  *       devuelto por la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarDiasDelAgno(unsigned agno, unsigned valorEsperado) {
+void probarDiasDelAgno(unsigned agno, unsigned valorEsperado, bool &todoOk) {
     cout << "Prueba diasDelAgno(" << agno << ") ";
     unsigned valorDevuelto = diasDelAgno(agno);
-    escribirResultadoPrueba(valorEsperado, valorDevuelto);
+    escribirResultadoPrueba(valorEsperado, valorDevuelto, todoOk);
 }
 
 
@@ -111,13 +156,15 @@ void probarDiasDelAgno(unsigned agno, unsigned valorEsperado) {
  *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, informa también acerca del valor incorrecto
  *       devuelto por la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDiaEnElAgno(unsigned dia, unsigned mes, unsigned agno, 
-                       unsigned valorEsperado) {
+                       unsigned valorEsperado, bool &todoOk) {
     cout << "Prueba diaEnElAgno(" << dia << ", " << mes << ", " << agno
          << ") ";
     unsigned valorDevuelto = diaEnElAgno(dia, mes, agno);
-    escribirResultadoPrueba(valorEsperado, valorDevuelto);
+    escribirResultadoPrueba(valorEsperado, valorDevuelto, todoOk);
 }
 
 
@@ -128,11 +175,13 @@ void probarDiaEnElAgno(unsigned dia, unsigned mes, unsigned agno,
  *       «esAnterior», invocada con los argumentos «fecha1» y «fecha2», ha
  *       devuelto el valor correcto «valorEsperado». En caso negativo, ha
  *       informado también acerca del valor incorrecto que devolvió la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado) {
+void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado, bool &todoOk) {
     cout << "Prueba esAnterior(" << fecha1 << ", " << fecha2 << ") ";
     bool valorDevuelto = esAnterior(fecha1, fecha2);
-    escribirResultadoPrueba(valorEsperado, valorDevuelto);
+    escribirResultadoPrueba(valorEsperado, valorDevuelto, todoOk);
 }
 
 
@@ -145,22 +194,15 @@ void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado) {
  *       («diaSigEsperado», «mesSigEsperado» y «agnoSigEsperado»). En caso
  *       negativo, informa también acerca del valor incorrecto que devolvió
  *       la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDiaSiguiente(unsigned dia, unsigned mes, unsigned agno,
         unsigned diaSigEsperado, unsigned mesSigEsperado,
-        unsigned agnoSigEsperado) {
+        unsigned agnoSigEsperado, bool &todoOk) {
     cout << "Prueba diaSiguiente(" << dia << ", " << mes << ", " << agno << ") ";
     diaSiguiente(dia, mes, agno);
-    if (dia == diaSigEsperado && mes == mesSigEsperado 
-            && agno == agnoSigEsperado) {
-        cout << "correcta." << endl;
-    } else {
-        cout << "incorrecta:" << endl;
-        cout << "   debería haber obtenido dia=" << diaSigEsperado << ", mes=" 
-             << mesSigEsperado << ", agno=" << agnoSigEsperado << ',' << endl;
-        cout << "         pero ha obtenido dia=" << dia << ", mes=" << mes 
-             << ", agno=" << agno << '.' << endl;
-    }
+    escribirResultadoPrueba(dia, mes, agno, diaSigEsperado, mesSigEsperado, agnoSigEsperado, todoOk);
 }
 
 
@@ -189,7 +231,7 @@ void escribirDiaSemana(unsigned diaSemana) {
     } else if (diaSemana == 6) {
         cout << " (domingo)";
     } else {
-        cout << diaSemana << " (no se corresponde con ningún código válido [0-6])";
+        cout << " (no se corresponde con ningún código válido [0-6])";
     }
 }
 
@@ -206,19 +248,26 @@ void escribirDiaSemana(unsigned diaSemana) {
  *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, informa también acerca del valor incorrecto
  *       devuelto por la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDiaDeLaSemana(unsigned dia, unsigned mes, unsigned agno,
-                         unsigned valorEsperado) {
+                         unsigned valorEsperado, bool &todoOk) {
     cout << "Prueba diaDeLaSemana(" << dia << ", " << mes << ", " << agno << ") ";
     unsigned valorDevuelto = diaDeLaSemana(dia, mes, agno);
     if (valorDevuelto == valorEsperado) {
         cout << "correcta." << endl;
     } else {
+        todoOk = false;
         cout << "incorrecta:" << endl;
-        cout << "   debería devolver ";
+        cout << ESCAPE_ROJO;
+        cout << "   debería devolver " << ESCAPE_ROJO_NEGRITA;
         escribirDiaSemana(valorEsperado);
-        cout << ", pero devuelve ";
+        cout << ESCAPE_NORMAL << ESCAPE_ROJO
+             << ", pero devuelve "
+             << ESCAPE_ROJO_NEGRITA;
         escribirDiaSemana(valorDevuelto);
-        cout << '.' << endl;
+        cout << ESCAPE_NORMAL << ESCAPE_ROJO << '.' << endl;
+        cout << ESCAPE_NORMAL;
     }
 }

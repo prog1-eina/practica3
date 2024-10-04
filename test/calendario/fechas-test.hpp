@@ -8,6 +8,7 @@
 \******************************************************************************/
 
 #pragma once
+#include "testing-prog1.hpp"
 
 /*
  * Pre:  «valorEsperado» es el entero que, al ser escrito en base 10,
@@ -19,9 +20,11 @@
  *       «mes» y «agno», calcula el valor correcto «valorEsperado».
  *       En caso negativo, informa también acerca del valor
  *       incorrecto que calculó la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarComponer(unsigned dia, unsigned mes, unsigned agno, 
-                    unsigned valorEsperado);
+                    unsigned valorEsperado, bool &todoOk);
 
 
 /*
@@ -35,9 +38,11 @@ void probarComponer(unsigned dia, unsigned mes, unsigned agno,
  *       «fecha», calcula los valores correctos de día, mes y año.
  *       En caso negativo, informa también acerca de los valores
  *       incorrectos que calculó la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDescomponer(unsigned fecha, unsigned diaEsperado, 
-                       unsigned mesEsperado, unsigned agnoEsperado);
+                       unsigned mesEsperado, unsigned agnoEsperado, bool &todoOk);
 
 
 /*
@@ -47,8 +52,10 @@ void probarDescomponer(unsigned fecha, unsigned diaEsperado,
  *       «esAnterior», invocada con los argumentos «fecha1» y «fecha2», ha
  *       devuelto el valor correcto «valorEsperado». En caso negativo, ha
  *       informado también acerca del valor incorrecto que devolvió la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado);
+void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado, bool &todoOk);
 
 
 /*
@@ -60,8 +67,10 @@ void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado);
  *       Devuelve el valor correcto «valorEsperado». En caso negativo,
  *       informa también acerca del valor incorrecto devuelto por
  *       la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado);
+void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado, bool &todoOk);
 
 
 /*
@@ -72,8 +81,10 @@ void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado);
  *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, informa también acerca del valor incorrecto
  *       devuelto por la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarDiasDelAgno(unsigned agno, unsigned valorEsperado);
+void probarDiasDelAgno(unsigned agno, unsigned valorEsperado, bool &todoOk);
 
 
 /*
@@ -85,9 +96,11 @@ void probarDiasDelAgno(unsigned agno, unsigned valorEsperado);
  *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, informa también acerca del valor incorrecto
  *       devuelto por la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDiaEnElAgno(unsigned dia, unsigned mes, unsigned agno,
-                       unsigned valorEsperado);
+                       unsigned valorEsperado, bool &todoOk);
 
 
 /*
@@ -99,10 +112,12 @@ void probarDiaEnElAgno(unsigned dia, unsigned mes, unsigned agno,
  *       («diaSigEsperado», «mesSigEsperado» y «agnoSigEsperado»). En caso
  *       negativo, informa también acerca del valor incorrecto que devolvió
  *       la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDiaSiguiente(unsigned dia, unsigned mes, unsigned agno,
                         unsigned diaSigEsperado, unsigned mesSigEsperado,
-                        unsigned agnoSigEsperado);
+                        unsigned agnoSigEsperado, bool &todoOk);
    
                         
 /*
@@ -117,6 +132,8 @@ void probarDiaSiguiente(unsigned dia, unsigned mes, unsigned agno,
  *       «agno», Devuelve el valor correcto «valorEsperado». En caso
  *       negativo, informa también acerca del valor incorrecto
  *       devuelto por la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDiaDeLaSemana(unsigned dia, unsigned mes, unsigned agno,
-                         unsigned valorEsperado);
+                         unsigned valorEsperado, bool &todoOk);

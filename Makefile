@@ -34,10 +34,9 @@ BUILD_DIR = build
 # Variable que define el directorio en el que crear los ficheros ejecutables 
 BIN_DIR = bin
 
-# Variable preestablecida de «make» que en la que se pueden definir los 
-# directorios en los que pueden hallarse los ficheros de codigo fuente a 
-# compilar, con el objetivo de evitar tenerlos que poner de forma explícita
-# en las reglas. 
+# Variable preestablecida de «make» en la definir los directorios en los que pueden
+# hallarse los ficheros de codigo fuente a compilar, con el objetivo de evitar
+# tenerlos que poner de forma explícita en las reglas. 
 # En este caso, son el directorio de codigo fuente («src/calculadora») y el 
 # directorio de código para pruebas («test/calculadora» y «test/testing-prog1»).
 VPATH = $(SOURCE_DIR) $(TEST_DIR) $(TESTING_LIB_DIR)

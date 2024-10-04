@@ -31,38 +31,54 @@ using namespace std;
  *       completa un mensaje en la pantalla informando de que la prueba es
  *       correcta. En caso contrario, indica que es incorrecta e informa
  *       también de los valores de «valorEsperado» y «valorCalculado».
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
 
 /*
  * Versión de la función para datos de tipo «int»
  */
-void escribirResultadoPrueba(const int valorEsperado, const int valorCalculado);
+void escribirResultadoPrueba(const int valorEsperado, const int valorCalculado,
+                             bool &todoOk);
 
 /*
  * Versión de la función para datos de tipo «unsigned»
  */
 void escribirResultadoPrueba(const unsigned valorEsperado,
-                             const unsigned valorCalculado);
+                             const unsigned valorCalculado, bool &todoOk);
 
 /*
  * Versión de la función para datos de tipo «bool»
  */
 void escribirResultadoPrueba(const bool valorEsperado,
-                             const bool valorCalculado);
+                             const bool valorCalculado, bool &todoOk);
 
 /*
  * Versión de la función para datos de tipo «double»
  */
 void escribirResultadoPrueba(const double valorEsperado,
-                             const double valorCalculado);
+                             const double valorCalculado, bool &todoOk);
 /*
  * Versión de la función para datos de tipo «char»
  */
 void escribirResultadoPrueba(const char valorEsperado,
-                             const char valorCalculado);
+                             const char valorCalculado, bool &todoOk);
 
 /*
  * Versión de la función para datos de tipo «string»
  */
 void escribirResultadoPrueba(const string valorEsperado,
-                             const string valorCalculado);
+                             const string valorCalculado, bool &todoOk);
+
+
+/* 
+ * Constantes que definen las secuencias de escape que permiten escribir
+ * mensajes en la pantalla en color rojo, rojo con negrita y normal.
+ */
+const string ESCAPE_ROJO = "\033[31m";
+const string ESCAPE_NEGRITA = "\033[1m";
+const string ESCAPE_ROJO_NEGRITA = "\033[31;1m";
+const string ESCAPE_NORMAL = "\033[0m";
+
+
+
