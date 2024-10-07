@@ -27,6 +27,16 @@
             "problemMatcher": ["$gcc"],
         },
         {
+            "label": "Ejecutar proyecto «calculadora» (Windows 11)",
+            "type": "shell",
+            "command": "bin/calculadora",
+            "windows": {
+                "command": "cmd /s /c \\\"chcp 65001 && bin\\calculadora\\\"",
+            },
+            "dependsOn": "Compilar proyecto «calculadora»",
+            "problemMatcher": ["$gcc"],
+        },
+        {
             "label": "Compilar tests del módulo «calculos»",
             "type": "shell",
             "command": "make",
@@ -95,7 +105,7 @@
             ],
             "problemMatcher": ["$gcc"],
             "group": "build",
-       },
+        },
     ],
     "presentation": {
         "showReuseMessage": true,
