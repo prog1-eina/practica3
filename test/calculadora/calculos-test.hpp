@@ -14,8 +14,10 @@
  *       «esCapicua», invocada con el argumento «n», Devuelve el valor
  *       correcto «valorEsperado». En caso negativo, informa
  *       también acerca del valor incorrecto que devolvió la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarEsCapicua(int n, bool valorEsperado);
+void probarEsCapicua(int n, bool valorEsperado, bool &todoOk);
 
 /*
  * Pre:  «valorEsperado» es el mínimo común múltiplo de «n» y «m».
@@ -23,5 +25,7 @@ void probarEsCapicua(int n, bool valorEsperado);
  *       «mcm», invocada con los argumentos «n» y «m», Devuelve el valor
  *       correcto «valorEsperado». En caso negativo, informa
  *       también acerca del valor incorrecto que devolvió la función.
+ *       Si se ha calculado el resultado correcto, el valor de «todoOk»
+ *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarMcm(int n, int m, unsigned valorEsperado);
+void probarMcm(int n, int m, unsigned valorEsperado, bool &todoOk);

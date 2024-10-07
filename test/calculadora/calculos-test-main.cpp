@@ -10,6 +10,7 @@
 
 #include <iostream>
 #include "calculos-test.hpp"
+#include "testing-prog1.hpp"
 using namespace std;
 
 /*
@@ -20,54 +21,65 @@ using namespace std;
  * las que debería proporcionar.
  */
 int main() {
-    probarEsCapicua(0, true);
-    probarEsCapicua(1, true);
-    probarEsCapicua(-1, true);
-    probarEsCapicua(9, true);
-    probarEsCapicua(-9, true);
-    probarEsCapicua(10, false);
-    probarEsCapicua(-10, false);
-    probarEsCapicua(11, true);
-    probarEsCapicua(-11, true);
-    probarEsCapicua(99, true);
-    probarEsCapicua(-99, true);
-    probarEsCapicua(100, false);
-    probarEsCapicua(-100, false);
-    probarEsCapicua(1234321, true);
-    probarEsCapicua(-1234321, true);
-    probarEsCapicua(12344321, true);
-    probarEsCapicua(-12344321, true);
-    probarEsCapicua(1234329, false);
-    probarEsCapicua(-1234329, false);
-    probarEsCapicua(12344329, false);
-    probarEsCapicua(-12344329, false);
-    probarEsCapicua(1234391, false);
-    probarEsCapicua(-1234391, false);
-    probarEsCapicua(12344391, false);
-    probarEsCapicua(-12344391, false);
-    probarEsCapicua(1234921, false);
-    probarEsCapicua(-1234921, false);
-    probarEsCapicua(2147483647, false);
-    probarEsCapicua(-2147483647, false);
-    probarEsCapicua(2147447412, true);
-    probarEsCapicua(-2147447412, true);
-    
-    probarMcm(0, 1, 0);
-    probarMcm(1, 0, 0);
-    probarMcm(1, 1, 1);
-    probarMcm(2, 2, 2);
-    probarMcm(6, 6, 6);
-    probarMcm(2, 3, 6);
-    probarMcm(3, 2, 6);
-    probarMcm(3, 12, 12);
-    probarMcm(12, 3, 12);
-    probarMcm(10, 15, 30);
-    probarMcm(15, 10, 30);
-    probarMcm(-10, 15, 30);
-    probarMcm(10, -15, 30);
-    probarMcm(-10, -15, 30);
-    probarMcm(41273, 80758, 22369966);
-    probarMcm(41273, 161516, 44739932);
+    bool todoOk = true;
 
-    return 0;
+    probarEsCapicua(0, true, todoOk);
+    probarEsCapicua(1, true, todoOk);
+    probarEsCapicua(-1, true, todoOk);
+    probarEsCapicua(9, true, todoOk);
+    probarEsCapicua(-9, true, todoOk);
+    probarEsCapicua(10, false, todoOk);
+    probarEsCapicua(-10, false, todoOk);
+    probarEsCapicua(11, true, todoOk);
+    probarEsCapicua(-11, true, todoOk);
+    probarEsCapicua(99, true, todoOk);
+    probarEsCapicua(-99, true, todoOk);
+    probarEsCapicua(100, false, todoOk);
+    probarEsCapicua(-100, false, todoOk);
+    probarEsCapicua(1234321, true, todoOk);
+    probarEsCapicua(-1234321, true, todoOk);
+    probarEsCapicua(12344321, true, todoOk);
+    probarEsCapicua(-12344321, true, todoOk);
+    probarEsCapicua(1234329, false, todoOk);
+    probarEsCapicua(-1234329, false, todoOk);
+    probarEsCapicua(12344329, false, todoOk);
+    probarEsCapicua(-12344329, false, todoOk);
+    probarEsCapicua(1234391, false, todoOk);
+    probarEsCapicua(-1234391, false, todoOk);
+    probarEsCapicua(12344391, false, todoOk);
+    probarEsCapicua(-12344391, false, todoOk);
+    probarEsCapicua(1234921, false, todoOk);
+    probarEsCapicua(-1234921, false, todoOk);
+    probarEsCapicua(2147483647, false, todoOk);
+    probarEsCapicua(-2147483647, false, todoOk);
+    probarEsCapicua(2147447412, true, todoOk);
+    probarEsCapicua(-2147447412, true, todoOk);
+    
+    probarMcm(0, 1, 0, todoOk);
+    probarMcm(1, 0, 0, todoOk);
+    probarMcm(1, 1, 1, todoOk);
+    probarMcm(2, 2, 2, todoOk);
+    probarMcm(6, 6, 6, todoOk);
+    probarMcm(2, 3, 6, todoOk);
+    probarMcm(3, 2, 6, todoOk);
+    probarMcm(3, 12, 12, todoOk);
+    probarMcm(12, 3, 12, todoOk);
+    probarMcm(10, 15, 30, todoOk);
+    probarMcm(15, 10, 30, todoOk);
+    probarMcm(-10, 15, 30, todoOk);
+    probarMcm(10, -15, 30, todoOk);
+    probarMcm(-10, -15, 30, todoOk);
+    probarMcm(41273, 80758, 22369966, todoOk);
+    probarMcm(41273, 161516, 44739932, todoOk);
+
+    cout << endl;
+    if (todoOk) {
+        cout << ESCAPE_NEGRITA << "Todas las pruebas realizadas correctamente"
+             << ESCAPE_NORMAL << endl;
+        return 0;
+    } else {
+        cout << ESCAPE_ROJO_NEGRITA << "Se han detectado errores en las pruebas."
+             << ESCAPE_NORMAL << endl;
+        return 1;
+    }
 }
