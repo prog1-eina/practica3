@@ -21,7 +21,8 @@
             "type": "shell",
             "command": "bin/calculadora",
             "windows": {
-                "command": "cmd /s /c 'chcp 65001 && bin\\calculadora'",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\calculadora"]
             },
             "dependsOn": "Compilar proyecto «calculadora»",
             "problemMatcher": ["$gcc"],
@@ -41,7 +42,8 @@
             "type": "shell",
             "command": "bin/calculos-test",
             "windows": {
-                "command": "cmd /s /c 'chcp 65001 && bin\\calculos-test'",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\calculos-test"]
             },
             "dependsOn": "Compilar tests del módulo «calculos»",
             "problemMatcher": ["$gcc"],
@@ -61,7 +63,8 @@
             "type": "shell",
             "command": "bin/calendario",
             "windows": {
-                "command": "cmd /s /c 'chcp 65001 && bin\\calendario'",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\calendario"]
             },
             "dependsOn": "Compilar proyecto «calendario»",
             "problemMatcher": ["$gcc"],
@@ -81,7 +84,8 @@
             "type": "shell",
             "command": "bin/fechas-test",
             "windows": {
-                "command": "cmd /s /c 'chcp 65001 && bin\\fechas-test'",
+                "command": "cmd",
+                "args": ["/c", "chcp 65001 && bin\\fechas-test"]
             },
             "dependsOn": "Compilar tests del módulo «fechas»",
             "problemMatcher": ["$gcc"],
