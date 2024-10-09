@@ -35,7 +35,6 @@
                 "calculos-test"
             ],
             "problemMatcher": ["$gcc"],
-            "group": "test",
         },
         {
             "label": "Ejecutar tests del módulo «calculos»",
@@ -47,6 +46,7 @@
             },
             "dependsOn": "Compilar tests del módulo «calculos»",
             "problemMatcher": ["$gcc"],
+            "group": "test",
         },
         {
             "label": "Compilar proyecto «calendario»",
@@ -77,7 +77,6 @@
                 "fechas-test", "-f", "calendario.mk"
             ],
             "problemMatcher": ["$gcc"],
-            "group": "test",
         },
         {
             "label": "Ejecutar tests del módulo «fechas»",
@@ -89,6 +88,7 @@
             },
             "dependsOn": "Compilar tests del módulo «fechas»",
             "problemMatcher": ["$gcc"],
+            "group": "test",
         },
         {
             "label": "Limpiar resultados de compilación",
