@@ -1,11 +1,11 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
  * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de interfaz de un módulo auxiliar «pruebas»
  *          que hace pruebas unitarias de las funciones del módulo
  *          «fechas».
-\******************************************************************************/
+ *****************************************************************************/
 
 #pragma once
 #include "testing-prog1.hpp"
@@ -42,7 +42,7 @@ void probarComponer(unsigned dia, unsigned mes, unsigned agno,
  *       no se modifica y en caso contrario, se establece en «false».
  */
 void probarDescomponer(unsigned fecha, unsigned diaEsperado, 
-                       unsigned mesEsperado, unsigned agnoEsperado, bool &todoOk);
+        unsigned mesEsperado, unsigned agnoEsperado, bool &todoOk);
 
 
 /*
@@ -55,7 +55,8 @@ void probarDescomponer(unsigned fecha, unsigned diaEsperado,
  *       Si se ha calculado el resultado correcto, el valor de «todoOk»
  *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado, bool &todoOk);
+void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado,
+                      bool &todoOk);
 
 
 /*
@@ -70,7 +71,8 @@ void probarEsAnterior(unsigned fecha1, unsigned fecha2, bool valorEsperado, bool
  *       Si se ha calculado el resultado correcto, el valor de «todoOk»
  *       no se modifica y en caso contrario, se establece en «false».
  */
-void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado, bool &todoOk);
+void probarDiasDelMes(unsigned mes, unsigned agno, unsigned valorEsperado,
+                      bool &todoOk);
 
 
 /*
@@ -104,7 +106,8 @@ void probarDiaEnElAgno(unsigned dia, unsigned mes, unsigned agno,
 
 
 /*
- * Pre:  La fecha formada por «diaSigEsperado»/«mesSigEsperado»/«agnoSigEsperado»
+ * Pre:  La fecha formada por
+ *       «diaSigEsperado»/«mesSigEsperado»/«agnoSigEsperado»
  *       representa el día siguiente a la fecha formada por «dia»/«mes»/«agno».
  * Post: Escribe un mensaje en pantalla informando acerca de si la función
  *       «diaSiguiente», invocada con los argumentos «dia», «mes» y «agno», ha
@@ -124,9 +127,10 @@ void probarDiaSiguiente(unsigned dia, unsigned mes, unsigned agno,
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12 y agno >= 1900, la fecha formada por
  *       «dia/mes/agno» es una fecha válida del calendario gregoriano y
  *       «valorEsperado» codifica el día de la semana de la fecha
- *       representada por los valores de los parámetros «dia», «mes» y «agno», de
- *       acuerdo con la siguiente codificación: el 0 codifica el lunes, el 1
- *       codifica martes y así sucesivamente hasta el 6, que codifica el domingo.
+ *       representada por los valores de los parámetros «dia», «mes» y «agno»,
+ *       de acuerdo con la siguiente codificación: el 0 codifica el lunes, el 1
+ *       codifica martes y así sucesivamente hasta el 6, que codifica el
+ *       domingo.
  * Post: Escribe un mensaje en pantalla informando acerca de si la
  *       función «diaDeLaSemana», invocada con los argumentos «dia», «mes» y
  *       «agno», Devuelve el valor correcto «valorEsperado». En caso

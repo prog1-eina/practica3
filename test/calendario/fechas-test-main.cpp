@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
  * Última revisión: 22 de octubre de 2018
@@ -6,7 +6,7 @@
  *          las funciones del módulo «fechas».
  * Nota: Leer el fichero README.md, que contiene instrucciones para su 
  *       compilación y ejecución.
-\******************************************************************************/
+ *****************************************************************************/
 
  #include <iostream>
  #include "fechas-test.hpp"
@@ -130,7 +130,8 @@ int main() {
              << ESCAPE_NORMAL << endl;
         return 0;
     } else {
-        cout << ESCAPE_ROJO_NEGRITA << "Se han detectado errores en las pruebas."
+        cout << ESCAPE_ROJO_NEGRITA
+             << "Se han detectado errores en las pruebas."
              << ESCAPE_NORMAL << endl;
         return 1;
     }

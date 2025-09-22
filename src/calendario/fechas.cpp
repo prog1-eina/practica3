@@ -1,12 +1,12 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores originales: Miguel Ángel Latre y Javier Martínez
- * Modificado por: ¡PON AQUÍ TU NOMBRE! (código de las funciones establecidas en
- *                 la práctica 3)
+ * Modificado por: ¡PON AQUÍ TU NOMBRE! (código de las funciones establecidas
+ *                 en la práctica 3)
  * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de implementación de un módulo «fechas» que ofrece
  *          funciones para trabajar con fechas del calendario
-\******************************************************************************/
+ *****************************************************************************/
 
 #include "fechas.hpp"
 
@@ -108,13 +108,13 @@ unsigned diaEnElAgno(unsigned dia, unsigned mes, unsigned agno) {
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12, agno > 1582 y la fecha formada por
  *       «dia», «mes» y «agno» representan una fecha válida del calendario
  *       gregoriano.
- * Post: Tras la ejecución de la función, los parámetros «fecha», «dia», «mes» y
- *       «agno» representan la fecha correspondiente al día siguiente al que
+ * Post: Tras la ejecución de la función, los parámetros «fecha», «dia», «mes»
+ *       y «agno» representan la fecha correspondiente al día siguiente al que
  *       representaban al iniciarse la ejecución de la función.
  * 
- *       Por ejemplo, si d, m y a son variables de tipo entero y d = 17, m = 10 y
- *       a = 2019, tras la invocación diaSiguiente(d, m, a) los valores de las
- *       variables serían d = 18, m = 10 y a = 2019.
+ *       Por ejemplo, si d, m y a son variables de tipo entero y d = 17, m = 10
+ *       y a = 2019, tras la invocación diaSiguiente(d, m, a) los valores de
+ *       las variables serían d = 18, m = 10 y a = 2019.
  *       Si los valores fueran d = 29, m = 2 y a = 2020, tras la invocación
  *       diaSiguiente(d, m, a) los valores serían d = 1, m = 3 y a = 2020.
  *       Si los valores fueran d = 31, m = 12 y a = 2022, tras la invocación
@@ -130,9 +130,10 @@ void diaSiguiente(unsigned &dia, unsigned &mes, unsigned &agno) {
  *       conjuntamente una fecha válida del calendario gregoriano igual o
  *       posterior al 1 de enero de 1900.
  * Post: Devuelve un entero que codifica el día de la semana de la fecha
- *       representada por los valores de los parámetros «dia», «mes» y «agno», de
- *       acuerdo con la siguiente codificación: el 0 codifica el lunes, el 1
- *       codifica martes y así sucesivamente hasta el 6, que codifica el domingo.
+ *       representada por los valores de los parámetros «dia», «mes» y «agno»,
+ *       de acuerdo con la siguiente codificación: el 0 codifica el lunes, el 1
+ *       codifica martes y así sucesivamente hasta el 6, que codifica el
+ *       domingo.
  */
 unsigned diaDeLaSemana(unsigned dia, unsigned mes, unsigned agno) {
     // Completar

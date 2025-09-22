@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Prácticas
  * Autores: Miguel Ángel Latre
  * Última revisión: 18 de octubre de 2020
@@ -13,7 +13,7 @@
  *          correspondientes a pruebas en las que se detectan errores). Es por
  *          ello que hay mucho código repetido, ya que las estructuras
  *          de las funciones se repiten.
-\******************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include <string>
@@ -29,8 +29,8 @@ using namespace std;
  *       determinados argumentos.
  * Post: Si los valores de «valorEsperado» y «valorCalculado» son iguales,
  *       completa un mensaje en la pantalla informando de que la prueba es
- *       correcta. En caso contrario, indica que es incorrecta e informa también
- *       de los valores de «valorEsperado» y «valorCalculado».
+ *       correcta. En caso contrario, indica que es incorrecta e informa
+ *       también de los valores de «valorEsperado» y «valorCalculado».
  *       Si se ha calculado el resultado correcto, el valor de «todoOk»
  *       no se modifica y en caso contrario, se establece en «false».
  */
@@ -38,7 +38,8 @@ using namespace std;
 /*
  * Versión de la función para datos de tipo «int»
  */
-void escribirResultadoPrueba(const int valorEsperado, const int valorCalculado, bool &todoOk) {
+void escribirResultadoPrueba(const int valorEsperado, const int valorCalculado,
+                             bool &todoOk) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
     } else {
@@ -81,7 +82,8 @@ void escribirResultadoPrueba(const unsigned valorEsperado,
 /*
  * Versión de la función para datos de tipo «bool»
  */
-void escribirResultadoPrueba(const bool valorEsperado, const bool valorCalculado, bool &todoOk) {
+void escribirResultadoPrueba(const bool valorEsperado,
+                             const bool valorCalculado, bool &todoOk) {
     if (valorEsperado == valorCalculado) {
         cout << "correcta." << endl;
     } else {

@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Tema 7 y práctica 3
  * Autores originales: Miguel Ángel Latre y Javier Martínez
  * Modificado por: ¡PON AQUÍ TU NOMBRE!
@@ -8,7 +8,7 @@
  *          tipo entero
  * Nota: Leer el fichero README.md, que contiene instrucciones para su 
  *       compilación y ejecución.
-\******************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include "calculos.hpp"
@@ -54,8 +54,8 @@ void pedirOrden(unsigned &operacion) {
  * Post: Ejecuta la 1ª orden, informando del número de cifras de «numero».
  */
 void ejecutarNumCifras(int numero) {
-    cout << "El número " << numero << " tiene " << numCifras(numero) << " cifras."
-         << endl;
+    cout << "El número " << numero << " tiene " << numCifras(numero) 
+         << " cifras." << endl;
 }
 
 
@@ -65,8 +65,8 @@ void ejecutarNumCifras(int numero) {
  *       «numero».
  */
 void ejecutarSumaCifras(int numero) {
-    cout << "Las cifras de " << numero << " suman " << sumaCifras(numero) << "."
-         << endl;
+    cout << "Las cifras de " << numero << " suman " << sumaCifras(numero)
+         << "." << endl;
 }
 
 
@@ -83,8 +83,9 @@ void ejecutarExtraerCifra(int numero) {
     cin >> posicion;
 
     if (posicion >= 1) {
-        cout << "La cifra situada en la posición " << posicion << " del número " 
-             << numero << " es " << cifra(numero, posicion) << "." << endl;
+        cout << "La cifra situada en la posición " << posicion 
+             << " del número " << numero << " es " << cifra(numero, posicion)
+             << "." << endl;
     } else {
         cout << "La posición tiene que ser mayor que 0." << endl;
     }
@@ -150,10 +151,10 @@ void ejecutarOrden(unsigned operacion) {
 
 
 /*
- * Programa que plantea al usuario de forma reiterada un menú con varias opciones.
- * En cada iteración, lee la respuesta del usuario y presenta los resultados de
- * ejecutar la opción elegida. Concluye cuando el usuario selecciona la
- * opción «0».
+ * Programa que plantea al usuario de forma reiterada un menú con varias
+ * opciones. En cada iteración, lee la respuesta del usuario y presenta los
+ * resultados de ejecutar la opción elegida. Concluye cuando el usuario
+ * selecciona la opción «0».
  */
 int main() {
     unsigned operacion;

@@ -1,4 +1,4 @@
-﻿/******************************************************************************\
+﻿/******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
  * Última revisión: 21 de octubre de 2019
@@ -9,7 +9,7 @@
  *          conceptos de C++ que se han visto en la asignatura (es por
  *          ello que hay mucho código repetido, ya que las estructuras
  *          de las funciones se repiten).
-\******************************************************************************/
+ *****************************************************************************/
 
 #include <iostream>
 #include "testing-prog1.hpp"
