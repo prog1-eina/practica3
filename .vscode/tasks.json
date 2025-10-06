@@ -46,7 +46,10 @@
             },
             "dependsOn": "Compilar tests del módulo «calculos»",
             "problemMatcher": ["$gcc"],
-            "group": "test",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
         },
         {
             "label": "Compilar proyecto «calendario»",
