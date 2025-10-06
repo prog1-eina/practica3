@@ -72,15 +72,10 @@ int main() {
     probarMcm(41273, 80758, 22369966, todoOk);
     probarMcm(41273, 161516, 44739932, todoOk);
 
-    cout << endl;
+    escribirMensajeFinal(todoOk);
     if (todoOk) {
-        cout << ESCAPE_NEGRITA << "Todas las pruebas realizadas correctamente"
-             << ESCAPE_NORMAL << endl;
         return 0;
     } else {
-        cout << ESCAPE_ROJO_NEGRITA
-             << "Se han detectado errores en las pruebas."
-             << ESCAPE_NORMAL << endl;
         return 1;
     }
 }

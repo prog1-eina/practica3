@@ -124,15 +124,10 @@ int main() {
     probarDiaDeLaSemana(29,  2, 2400, MARTES, todoOk);
     probarDiaDeLaSemana( 1,  3, 2400, MIERCOLES, todoOk);
 
-    cout << endl;
+    escribirMensajeFinal(todoOk);
     if (todoOk) {
-        cout << ESCAPE_NEGRITA << "Todas las pruebas realizadas correctamente"
-             << ESCAPE_NORMAL << endl;
         return 0;
     } else {
-        cout << ESCAPE_ROJO_NEGRITA
-             << "Se han detectado errores en las pruebas."
-             << ESCAPE_NORMAL << endl;
         return 1;
     }
 }

@@ -70,6 +70,14 @@ void escribirResultadoPrueba(const char valorEsperado,
 void escribirResultadoPrueba(const string valorEsperado,
                              const string valorCalculado, bool &todoOk);
 
+/*
+ * Pre:  ---
+ * Post: Si «todoOk» es «true», escribe en la pantalla en negrita el mensaje
+ *       "Todas las pruebas realizadas correctamente". En caso contrario,
+ *       escribe en negrita y rojo el mensaje
+ *       "Se han detectado errores en las pruebas.".
+ */
+void escribirMensajeFinal(const bool todoOk);
 
 /* 
  * Constantes que definen las secuencias de escape que permiten escribir

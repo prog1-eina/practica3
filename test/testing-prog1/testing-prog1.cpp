@@ -164,3 +164,21 @@ void escribirResultadoPrueba(const string valorEsperado,
         cout << ESCAPE_NORMAL;
     }
 }
+
+
+/*
+ * Pre:  ---
+ * Post: Si «todoOk» es «true», escribe en la pantalla en negrita el mensaje
+ *       "Todas las pruebas realizadas correctamente". En caso contrario, escribe
+ *       en negrita y rojo el mensaje "Se han detectado errores en las pruebas.".
+ */
+void escribirMensajeFinal(const bool todoOk) {
+    cout << endl;
+    if (todoOk) {
+        cout << ESCAPE_NEGRITA << "Todas las pruebas realizadas correctamente"
+             << ESCAPE_NORMAL << endl;
+    } else {
+        cout << ESCAPE_ROJO_NEGRITA << "Se han detectado errores en las pruebas."
+             << ESCAPE_NORMAL << endl;
+    }
+}
