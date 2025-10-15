@@ -109,11 +109,15 @@ void ejecutarImagenEspecular(int numero) {
  *       o no lo es.
  */
 void ejecutarEsPrimo(int numero) {
-    cout << "El número " << numero;
-    if (!esPrimo(numero)) {
-        cout << " no";
+    if (numero > 0) {
+        cout << "El número " << numero;
+        if (!esPrimo(numero)) {
+            cout << " no";
+        }
+        cout << " es primo." << endl;
+    } else {
+        cout << "El número no es positivo." << endl;
     }
-    cout << " es primo." << endl;
 }
 
 
