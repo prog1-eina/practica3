@@ -2,7 +2,6 @@
  * Curso de Programación 1. Tema 7 y práctica 3
  * Autores originales: Miguel Ángel Latre y Javier Martínez
  * Modificado por: ¡PON AQUÍ TU NOMBRE!
- * Última revisión: 9 de octubre de 2021
  * Resumen: Módulo principal de un programa interactivo dirigido por menú que
  *          permite al usuario la realización de algunos cálculos con datos de
  *          tipo entero

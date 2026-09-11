@@ -3,7 +3,6 @@
  * Autores originales: Miguel Ángel Latre y Javier Martínez
  * Modificado por: ¡PON AQUÍ TU NOMBRE! (código de las funciones establecidas
  *                 en la práctica 3)
- * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de implementación de un módulo «fechas» que ofrece
  *          funciones para trabajar con fechas del calendario
  *****************************************************************************/

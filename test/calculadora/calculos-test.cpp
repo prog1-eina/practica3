@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Miguel Ángel Latre
- * Última revisión: 21 de octubre de 2019
  * Resumen: Fichero de implementación de un módulo auxiliar
  *          «calculos-test» que hace pruebas unitarias de las funciones
  *          del módulo «calculos».

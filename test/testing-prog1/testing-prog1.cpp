@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Prácticas
  * Autores: Miguel Ángel Latre
- * Última revisión: 18 de octubre de 2020
  * Resumen: Fichero de implementación de un módulo auxiliar
  *          «testing» que escribe en la pantalla los resultados de realizar
  *          pruebas de unidad de algunas funciones del módulo «calculos» y 

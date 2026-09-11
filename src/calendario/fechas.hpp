@@ -1,7 +1,6 @@
 ﻿/******************************************************************************
  * Curso de Programación 1. Práctica 3
  * Autores: Javier Martínez y Miguel Ángel Latre
- * Última revisión: 8 de octubre de 2021
  * Resumen: Fichero de interfaz de un módulo «fechas» que ofrece funciones
  *          para trabajar con fechas del calendario.
  *
