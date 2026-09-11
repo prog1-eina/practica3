@@ -51,7 +51,7 @@ CXX = g++
 # Variable preestablecida de «make» que en la que se puede definir las opciones
 # con las que debe invocarse al compilador.
 # En este caso, son las siguientes:
-#    -Og:   indica al compilador que incluya información de depuración al generar
+#    -g:   indica al compilador que incluya información de depuración al generar
 #          los ejecutables o los ficheros intermedios de compilación. Esta 
 #          información es necesaria si luego se quiere utilizar el depurador.
 #    -Wall:  indica al compilador que informe de todos los 
@@ -65,7 +65,7 @@ CXX = g++
 #          actual, busque también en el directorio _dir_. En este caso, los
 #          ficheros de cabecera .hpp pueden estar en «src/calculadora» o en
 #          «test/testing-prog1».
-CXXFLAGS = -Og -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
+CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
 
 
 ## FICHEROS OBJETO (RESULTADOS INTERMEDIOS DE COMPILACIÓN):
@@ -101,11 +101,11 @@ all: calculadora
 # elementos de la lista $(OBJECTS) para generar «calculadora» 
 # (o «calculadora.exe»)
 calculadora: $(OBJECTS) | $(BIN_DIR)
-	$(CXX) -Og $(OBJECTS) -o $(BIN_DIR)/calculadora 
+	$(CXX) -g $(OBJECTS) -o $(BIN_DIR)/calculadora 
 
 # Sin utilizar varibles, la regla podría haberse escrito así:
 # calculadora: build/calculadora-main.o build/calculos.o | bin
-#	g++ -Og build/calculadora-main.o build/calculos.o \
+#	g++ -g build/calculadora-main.o build/calculos.o \
 #		-o bin/calculadora 
 
 
@@ -120,14 +120,14 @@ calculadora: $(OBJECTS) | $(BIN_DIR)
 # de la lista $(TESTING_OBJECTS) para generar «calculos-test»
 # (o «calculos-test.exe»)
 calculos-test: $(TESTING_OBJECTS) | $(BIN_DIR)
-	$(CXX) -Og $(TESTING_OBJECTS) -o $(BIN_DIR)/calculos-test
+	$(CXX) -g $(TESTING_OBJECTS) -o $(BIN_DIR)/calculos-test
 
 # Sin utilizar varibles, la regla podría haberse escrito de forma más larga y
 # menos mantenible por la repetición de los nombres de los ficheros
 # involucrados:
 # calculos-test: build/calculos-test-main.o build/calculos-test.o \
 #                build/testing.o build/calculos.o | bin
-#	g++ -Og build/calculos-test-main.o build/calculos-test.o \
+#	g++ -g build/calculos-test-main.o build/calculos-test.o \
 #		 build/testing-prog1.o build/calculos.o -o bin/calculos-test
 
 
