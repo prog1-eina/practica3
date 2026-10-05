@@ -10,7 +10,7 @@ En Visual Studio Code hay que abrir el directorio ``practica3``.
 
 Contiene el código de cuatro programas:
 
-1. Programa ``calculadora``. Para compilarlo y ejecutarlo desde la terminal en Linux y macOS:
+1. Programa ``calculadora``. Para compilarlo y ejecutarlo desde la terminal en Linux, macOS y Windows (con PowerShell):
 
     ```shell
     make 
