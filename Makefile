@@ -1,4 +1,4 @@
-################################################################################
+###############################################################################
 ## Fichero «Makefile» para:
 ##  - el programa «calculadora»
 ##  - el programa de pruebas del módulo «calculos»
@@ -6,17 +6,18 @@
 ## Este fichero es más complejo que el «Makefile» del repositorio
 ## correspondiente al tema 7
 ## (https://github.com/prog1-eina/tema-07-desarrollo-modular/blob/master/Makefile)
-## Sí es objetivo de la asignatura que comprendais los conceptos que se manejan
+## Sí es objetivo de la asignatura que comprendáis los conceptos que se manejan
 ## en el «Makefile» del tema 7, pero NO DE ESTE. No obstante, este fichero se
-## encuentra SOBREDOCUMENTADO por si tienes interés en entener cómo está hecho.
-################################################################################
+## encuentra SOBREDOCUMENTADO por si tienes interés en entender cómo está
+## hecho.
+###############################################################################
 
-################################################################################
-## Declaracion de variables del fichero «Makefile»
+###############################################################################
+## Declaración de variables del fichero «Makefile»
 
 ## DIRECTORIOS
 
-# Variable que define el directorio del código fuente del proyecto «calculadora»
+# Variable que define el directorio de código fuente del proyecto «calculadora»
 SOURCE_DIR = src/calculadora
 
 # Variable que define el directorio donde está el código fuente de las pruebas 
@@ -24,7 +25,7 @@ SOURCE_DIR = src/calculadora
 TEST_DIR = test/calculadora
 
 # Variable que define el directorio donde está el código fuente de una 
-# biblioteca para mostar los resultados de las pruebas de los programas de pruebas
+# biblioteca para mostrar los resultados de los programas de pruebas
 TESTING_LIB_DIR = test/testing-prog1
 
 # Variable que define el directorio en el que crear los ficheros intermedios 
@@ -34,31 +35,33 @@ BUILD_DIR = build
 # Variable que define el directorio en el que crear los ficheros ejecutables 
 BIN_DIR = bin
 
-# Variable preestablecida de «make» en la definir los directorios en los que pueden
-# hallarse los ficheros de codigo fuente a compilar, con el objetivo de evitar
-# tenerlos que poner de forma explícita en las reglas. 
+# Variable preestablecida de «make» en la que se definen los directorios en los
+# que pueden hallarse los ficheros de codigo fuente a compilar, con el objetivo
+# de evitar tenerlos que poner de forma explícita en las reglas. 
 # En este caso, son el directorio de codigo fuente («src/calculadora») y el 
-# directorio de código para pruebas («test/calculadora» y «test/testing-prog1»).
+# directorio de código para pruebas («test/calculadora» y
+# «test/testing-prog1»).
 VPATH = $(SOURCE_DIR) $(TEST_DIR) $(TESTING_LIB_DIR)
 
 
 ## COMPILADOR Y OPCIONES DE COMPILACIÓN:
 
-# Variable preestablecida de «make» que en la que se puede definir el nombre del
-# compilador. Esto permite que «make» genere recetas y reglas por defecto. 
+# Variable preestablecida de «make» que en la que se puede definir el nombre
+# del compilador. Esto permite que «make» genere recetas y reglas por defecto. 
 CXX = g++
 
 # Variable preestablecida de «make» que en la que se puede definir las opciones
 # con las que debe invocarse al compilador.
 # En este caso, son las siguientes:
-#    -g:   indica al compilador que incluya información de depuración al generar
-#          los ejecutables o los ficheros intermedios de compilación. Esta 
-#          información es necesaria si luego se quiere utilizar el depurador.
-#    -Wall:  indica al compilador que informe de todos los 
-#          _warnings_ (advertencias o usos del lenguaje que, pese a ser
+#    -g:   indica al compilador que incluya información de depuración al
+#          generar los ejecutables o los ficheros intermedios de compilación.
+#          Esta información es necesaria si luego se quiere utilizar el
+#          depurador.
+#    -Wall: indica al compilador que informe de todos los _warnings_
+#          (advertencias o usos del lenguaje que, pese a ser
 #          sintácticamente correctos, plantean un problema que casi siempre
 #          resulta ser un error.
-#    -Wextra:   indica al compilador que informe de algunos tipos de 
+#    -Wextra: indica al compilador que informe de algunos tipos de 
 #          advertencias adicionales.
 #    -I _directorio_:  indica al compilador que, cuando encuentre una cláusula
 #          de inclusión de un fichero, si este no se encuentra en el directorio
@@ -72,16 +75,18 @@ CXXFLAGS = -g -Wall -Wextra -I$(SOURCE_DIR) -I$(TESTING_LIB_DIR)
 
 # Variables para definir la lista de ficheros objeto de los que depende el
 # programa principal.
-# En este caso, son los ficheros build/calculadora-main.o y build/calculos.o.
+# En este caso, son los ficheros «build/calculadora-main.o» y
+# «build/calculos.o».
 OBJECTS =  $(addprefix $(BUILD_DIR)/, calculos.o calculadora-main.o)
 
-# Variable que define la lista de ficheros objeto de los que depende el programa
-# de pruebas del módulo «calculos»: los ficheros «build/calculos-test-main.o», 
-# «build/calculos-test.o», «build/testing-prog1.o» y «build/calculos.o».
+# Variable que define la lista de ficheros objeto de los que depende el
+# programa de pruebas del módulo «calculos»: los ficheros
+# «build/calculos-test-main.o», «build/calculos-test.o»,
+# «build/testing-prog1.o» y «build/calculos.o».
 TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/, calculos.o calculos-test-main.o \
                     calculos-test.o testing-prog1.o)
 
-################################################################################
+###############################################################################
 ## Reglas del fichero «Makefile»
 
 # Regla utilizada habitualmente como primera regla, para indicar cuál es el
@@ -90,20 +95,20 @@ TESTING_OBJECTS = $(addprefix $(BUILD_DIR)/, calculos.o calculos-test-main.o \
 # (o «calculadora.exe» en Windows) 
 all: calculadora
 
-# Regla para construir el objetivo «calculadora» («calculadora.exe» en Windows).
-# Tiene como prerrequisitos los ficheros «build/calculadora-main.o» y 
+# Regla para construir el objetivo «calculadora» («calculadora.exe» en 
+# Windows). Tiene como prerrequisitos los ficheros «build/calculadora-main.o» y 
 # «build/calculos.o», establecidos a partir de la variable $(OBJECTS) definida 
 # anteriormente. También establece un prerrequisito especial: que el objetivo 
 # $(BIN_DIR) (en este caso, el directorio «bin») simplemente exista.
 # Más adelante en el fichero «Makefile» hay reglas para cada uno de los 
 # objetivos de la lista $(OBJECTS) y para el objetivo $(BIN_DIR).
-# La receta correspondiente a la regla «calculadora» establece como compilar los
-# elementos de la lista $(OBJECTS) para generar «calculadora» 
+# La receta correspondiente a la regla «calculadora» establece como compilar
+# los elementos de la lista $(OBJECTS) para generar «calculadora» 
 # (o «calculadora.exe»)
 calculadora: $(OBJECTS) | $(BIN_DIR)
 	$(CXX) -g $(OBJECTS) -o $(BIN_DIR)/calculadora 
 
-# Sin utilizar varibles, la regla podría haberse escrito así:
+# Sin utilizar variables, la regla podría haberse escrito así:
 # calculadora: build/calculadora-main.o build/calculos.o | bin
 #	g++ -g build/calculadora-main.o build/calculos.o \
 #		-o bin/calculadora 
@@ -122,7 +127,7 @@ calculadora: $(OBJECTS) | $(BIN_DIR)
 calculos-test: $(TESTING_OBJECTS) | $(BIN_DIR)
 	$(CXX) -g $(TESTING_OBJECTS) -o $(BIN_DIR)/calculos-test
 
-# Sin utilizar varibles, la regla podría haberse escrito de forma más larga y
+# Sin utilizar variables, la regla podría haberse escrito de forma más larga y
 # menos mantenible por la repetición de los nombres de los ficheros
 # involucrados:
 # calculos-test: build/calculos-test-main.o build/calculos-test.o \
@@ -137,8 +142,8 @@ calculos-test: $(TESTING_OBJECTS) | $(BIN_DIR)
 # puede ubicarse en cualquier directorio de la variable $(VPATH). También tiene
 # como prerrequisito especial que exista el directorio «build». Establece como
 # receta ejecutar el programa g++, con los parámetros establecidos en la
-# variable $(CXXFLAGS), compilando el código fuente del fichero con la extensión
-# «.cpp» (la variable automática $< representa el nombre del fichero
+# variable $(CXXFLAGS), compilando el código fuente del fichero con la
+# extensión «.cpp» (la variable automática $< representa el nombre del fichero
 # correspondiente al primer prerrequisito de la regla) para generar el fichero
 # correspondiente al objetivo de la regla (representado por la variable
 # automática $@). 
