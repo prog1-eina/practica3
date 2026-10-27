@@ -13,7 +13,6 @@
  */
 const unsigned AGNO_INICIAL = 1900;
 
-
 /*
  * Pre:  La terna de parámetros «dia», «mes» y «agno» definen una fecha
  *       válida del calendario gregoriano, la fecha «dia/mes/agno».
@@ -26,7 +25,6 @@ const unsigned AGNO_INICIAL = 1900;
 void componer(unsigned dia, unsigned mes, unsigned agno,
               unsigned &f);
 
-
 /*
  * Pre:  El valor de «f» escrito en base 10 tiene la forma «aaaammdd»
  *       donde los dígitos «aaaa» representan el año de una fecha válida
@@ -38,7 +36,6 @@ void componer(unsigned dia, unsigned mes, unsigned agno,
 void descomponer(unsigned f,
                  unsigned &dia, unsigned &mes, unsigned &agno);
 
-
 /*
  * Pre:  Los valores de los parámetros «f1» y «f2» escritos en base 10
  *       tienen la forma «aaaammdd», donde los dígitos «aaaa» representan
@@ -49,33 +46,12 @@ void descomponer(unsigned f,
  */
 bool esAnterior(unsigned f1, unsigned f2);
 
-
-/*
- * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12, agno > 1582 y la fecha formada por
- *       «dia», «mes» y «agno» representan una fecha válida del calendario
- *       gregoriano.
- * Post: Tras la ejecución de la función, los parámetros «fecha», «dia», «mes»
- *       y «agno» representan la fecha correspondiente al día siguiente al que
- *       representaban al iniciarse la ejecución de la función.
- * 
- *       Por ejemplo, si d, m y a son variables de tipo unsigned y d = 17, 
- *       m = 10 y a = 2019, tras la invocación diaSiguiente(d, m, a) los
- *       valores de las variables serían d = 18, m = 10 y a = 2019.
- *       Si los valores fueran d = 29, m = 2 y a = 2020, tras la invocación
- *       diaSiguiente(d, m, a) los valores serían d = 1, m = 3 y a = 2020.
- *       Si los valores fueran d = 31, m = 12 y a = 2022, tras la invocación
- *       diaSiguiente(d, m, a) los valores serían d = 1, m = 1 y a = 2023.
- */
-void diaSiguiente(unsigned &dia, unsigned &mes, unsigned &agno);
-
-
 /*
  * Pre:  agno > 1582.
  * Post: Devuelve true si y solo si el año «agno» es bisiesto de
  *       acuerdo con las reglas del calendario gregoriano.
  */
 bool esBisiesto(unsigned agno);
-
 
 /*
  * Pre:  1 ≤ mes ≤ 12 y agno > 1582.
@@ -87,7 +63,6 @@ bool esBisiesto(unsigned agno);
  */
 unsigned diasDelMes(unsigned mes, unsigned agno);
 
-
 /*
  * Pre:  agno > 1582.
  * Post: Devuelve el número de días que tiene el año «agno».
@@ -95,7 +70,6 @@ unsigned diasDelMes(unsigned mes, unsigned agno);
  *                    diasDelAgno(2020) devuelve 366.
  */
 unsigned diasDelAgno(unsigned agno);
-
 
 /*
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12 y agno > 1582 y la fecha formada por
@@ -109,6 +83,23 @@ unsigned diasDelAgno(unsigned agno);
  */
 unsigned diaEnElAgno(unsigned dia, unsigned mes, unsigned agno);
 
+/*
+ * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12, agno > 1582 y la fecha formada por
+ *       «dia», «mes» y «agno» representan una fecha válida del calendario
+ *       gregoriano.
+ * Post: Tras la ejecución de la función, los parámetros «fecha», «dia», «mes»
+ *       y «agno» representan la fecha correspondiente al día siguiente al que
+ *       representaban al iniciarse la ejecución de la función.
+ *
+ *       Por ejemplo, si d, m y a son variables de tipo unsigned y d = 17,
+ *       m = 10 y a = 2019, tras la invocación diaSiguiente(d, m, a) los
+ *       valores de las variables serían d = 18, m = 10 y a = 2019.
+ *       Si los valores fueran d = 29, m = 2 y a = 2020, tras la invocación
+ *       diaSiguiente(d, m, a) los valores serían d = 1, m = 3 y a = 2020.
+ *       Si los valores fueran d = 31, m = 12 y a = 2022, tras la invocación
+ *       diaSiguiente(d, m, a) los valores serían d = 1, m = 1 y a = 2023.
+ */
+void diaSiguiente(unsigned &dia, unsigned &mes, unsigned &agno);
 
 /*
  * Pre:  Los valores de los parámetros «dia», «mes» y «agno» representan
