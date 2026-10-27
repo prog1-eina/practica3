@@ -18,11 +18,9 @@
  *       año de la fecha, los dígitos «mm», el mes y los dígitos «dd», el
  *       día.
  */
-void componer(unsigned dia, unsigned mes, unsigned agno,
-              unsigned &f) {
+void componer(unsigned dia, unsigned mes, unsigned agno, unsigned &f) {
     // Completar
 }
-
 
 /*
  * Pre:  El valor de «f» escrito en base 10 tiene la forma «aaaammdd»
@@ -32,11 +30,9 @@ void componer(unsigned dia, unsigned mes, unsigned agno,
  * Post: Los valores de los parámetros «dia», «mes» y «agno» son iguales,
  *       respectivamente, al día, al mes y al año de la fecha «f».
  */
-void descomponer(unsigned f,
-                 unsigned &dia, unsigned &mes, unsigned &agno) {
+void descomponer(unsigned f, unsigned &dia, unsigned &mes, unsigned &agno) {
     // Completar
 }
-
 
 /*
  * Pre:  Los valores de los parámetros «f1» y «f2» escritos en base 10
@@ -50,7 +46,6 @@ bool esAnterior(unsigned f1, unsigned f2) {
     // Completar
 }
 
-
 /*
  * Pre:  agno > 1582.
  * Post: Devuelve true si y solo si el año «agno» es bisiesto de
@@ -62,7 +57,6 @@ bool esBisiesto(unsigned agno) {
     bool multiplo400 = (agno % 400 == 0);
     return multiplo400 || (multiplo4 && !multiplo100);
 }
-
 
 /*
  * Pre:  1 ≤ mes ≤ 12 y agno > 1582.
@@ -76,7 +70,6 @@ unsigned diasDelMes(unsigned mes, unsigned agno) {
     // Completar
 }
 
-
 /*
  * Pre:  agno > 1582.
  * Post: Devuelve el número de días que tiene el año «agno».
@@ -86,7 +79,6 @@ unsigned diasDelMes(unsigned mes, unsigned agno) {
 unsigned diasDelAgno(unsigned agno) {
     // Completar
 }
-
 
 /*
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12 y agno > 1582 y la fecha formada por
@@ -102,7 +94,6 @@ unsigned diaEnElAgno(unsigned dia, unsigned mes, unsigned agno) {
     // Completar
 }
 
-
 /*
  * Pre:  1 ≤ dia ≤ 31, 1 ≤ mes ≤ 12, agno > 1582 y la fecha formada por
  *       «dia», «mes» y «agno» representan una fecha válida del calendario
@@ -110,7 +101,7 @@ unsigned diaEnElAgno(unsigned dia, unsigned mes, unsigned agno) {
  * Post: Tras la ejecución de la función, los parámetros «fecha», «dia», «mes»
  *       y «agno» representan la fecha correspondiente al día siguiente al que
  *       representaban al iniciarse la ejecución de la función.
- * 
+ *
  *       Por ejemplo, si d, m y a son variables de tipo entero y d = 17, m = 10
  *       y a = 2019, tras la invocación diaSiguiente(d, m, a) los valores de
  *       las variables serían d = 18, m = 10 y a = 2019.
@@ -122,7 +113,6 @@ unsigned diaEnElAgno(unsigned dia, unsigned mes, unsigned agno) {
 void diaSiguiente(unsigned &dia, unsigned &mes, unsigned &agno) {
     // Completar
 }
-
 
 /*
  * Pre:  Los valores de los parámetros «dia», «mes» y «agno» representan

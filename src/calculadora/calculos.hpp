@@ -8,14 +8,12 @@
  *          Versión específica de la práctica 3.
  *****************************************************************************/
 
-
 /*
  * Pre:  ---
  * Post: Devuelve el número de cifras de «n» cuando «n» se escribe en
  *       base 10.
  */
 unsigned numCifras(int n);
-
 
 /*
  * Pre:  ---
@@ -24,14 +22,12 @@ unsigned numCifras(int n);
  */
 unsigned sumaCifras(int n);
 
-
 /*
  *  Pre:  i ≥ 1
  *  Post: Devuelve la «i»-ésima cifra menos significativa de «n» cuando
  *        «n» se escribe en base 10.
  */
 unsigned cifra(int n, unsigned i);
-
 
 /*
  *  Pre:  ---
@@ -40,20 +36,17 @@ unsigned cifra(int n, unsigned i);
  */
 int imagen(int n);
 
-
 /*
  *  Pre:  ---
  *  Post: Devuelve el factorial de «n».
  */
 unsigned factorial(unsigned n);
 
-
 /*
  *  Pre:  ---
  *  Post: Devuelve true si y solo si «n» es un número primo.
  */
 bool esPrimo(unsigned n);
-
 
 /*
  *  Pre: a ≠ 0 o b ≠ 0

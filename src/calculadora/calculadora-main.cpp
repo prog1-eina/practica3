@@ -5,11 +5,12 @@
  * Resumen: Módulo principal de un programa interactivo dirigido por menú que
  *          permite al usuario la realización de algunos cálculos con datos de
  *          tipo entero
- * Nota: Leer el fichero README.md, que contiene instrucciones para su 
+ * Nota: Leer el fichero README.md, que contiene instrucciones para su
  *       compilación y ejecución.
  *****************************************************************************/
 
 #include <iostream>
+
 #include "calculos.hpp"
 using namespace std;
 
@@ -44,19 +45,17 @@ void presentarMenu() {
 void pedirOrden(unsigned &operacion) {
     presentarMenu();
     cout << "Seleccione una operación [0-" << NUM_OPERACIONES << "]: ";
-    cin >> operacion;    
+    cin >> operacion;
 }
-
 
 /*
  * Pre:  ---
  * Post: Ejecuta la 1ª orden, informando del número de cifras de «numero».
  */
 void ejecutarNumCifras(int numero) {
-    cout << "El número " << numero << " tiene " << numCifras(numero) 
+    cout << "El número " << numero << " tiene " << numCifras(numero)
          << " cifras." << endl;
 }
-
 
 /*
  * Pre:  ---
@@ -67,7 +66,6 @@ void ejecutarSumaCifras(int numero) {
     cout << "Las cifras de " << numero << " suman " << sumaCifras(numero)
          << "." << endl;
 }
-
 
 /*
  * Pre:  ---
@@ -82,7 +80,7 @@ void ejecutarExtraerCifra(int numero) {
     cin >> posicion;
 
     if (posicion >= 1) {
-        cout << "La cifra situada en la posición " << posicion 
+        cout << "La cifra situada en la posición " << posicion
              << " del número " << numero << " es " << cifra(numero, posicion)
              << "." << endl;
     } else {
@@ -90,17 +88,15 @@ void ejecutarExtraerCifra(int numero) {
     }
 }
 
-
 /*
  * Pre:  ---
  * Post: Ejecuta la 4ª orden, informando del valor de la imagen especular de
  * «numero».
  */
 void ejecutarImagenEspecular(int numero) {
-    cout << "El número imagen especular de " << numero
-         << " es el " << imagen(numero) << "." << endl;
+    cout << "El número imagen especular de " << numero << " es el "
+         << imagen(numero) << "." << endl;
 }
-
 
 /*
  * Pre:  ---
@@ -118,7 +114,6 @@ void ejecutarEsPrimo(int numero) {
         cout << "El número no es positivo." << endl;
     }
 }
-
 
 /*
  *  Pre:  ---
@@ -151,7 +146,6 @@ void ejecutarOrden(unsigned operacion) {
         cout << "Opción desconocida" << endl;
     }
 }
-
 
 /*
  * Programa que plantea al usuario de forma reiterada un menú con varias

@@ -28,7 +28,6 @@ void escribirNombreMes(unsigned mes) {
     cout << NOMBRES_MES[mes - 1];
 }
 
-
 /*
  * ¡ESCRIBE LA ESPECIFICACIÓN!
  */

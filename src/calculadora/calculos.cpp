@@ -15,16 +15,15 @@
  *       base 10.
  */
 unsigned numCifras(int n) {
-    unsigned cuenta = 1;      // lleva la cuenta de las cifras identificadas
-    n = n / 10;               // elimina la cifra menos significativa de «n»
+    unsigned cuenta = 1;  // lleva la cuenta de las cifras identificadas
+    n = n / 10;           // elimina la cifra menos significativa de «n»
     while (n != 0) {
         // El valor de <cuenta> es igual al de cifras identificadas en «n»
-        cuenta++;       // contabiliza la cifra menos significativa de «n»
-        n = n / 10;     // y la elimina de «n».
+        cuenta++;    // contabiliza la cifra menos significativa de «n»
+        n = n / 10;  // y la elimina de «n».
     }
     return cuenta;
 }
-
 
 /*
  * Pre:  ---
@@ -32,15 +31,14 @@ unsigned numCifras(int n) {
  *       base 10.
  */
 unsigned sumaCifras(int n) {
-    n = abs(n);                 // si «n» es negativo, le cambia el signo    
-    unsigned suma = 0;          // suma de las cifras eliminadas de «n»
+    n = abs(n);         // si «n» es negativo, le cambia el signo
+    unsigned suma = 0;  // suma de las cifras eliminadas de «n»
     while (n != 0) {
-        suma = suma + n % 10;   // suma la cifra menos significativa de «n»
-        n = n / 10;             // y la elimina de «n»
+        suma = suma + n % 10;  // suma la cifra menos significativa de «n»
+        n = n / 10;            // y la elimina de «n»
     }
     return suma;
 }
-
 
 /*
  *  Pre:  i ≥ 1
@@ -48,13 +46,12 @@ unsigned sumaCifras(int n) {
  *        «n» se escribe en base 10.
  */
 unsigned cifra(int n, unsigned i) {
-    n = abs(n);                 // si «n» es negativo, le cambia el signo    
+    n = abs(n);  // si «n» es negativo, le cambia el signo
     for (unsigned exp = 1; exp < i; exp++) {
-        n = n / 10;             // elimina la cifra menos significativa de «n»
+        n = n / 10;  // elimina la cifra menos significativa de «n»
     }
     return n % 10;
 }
-
 
 /*
  *  Pre:  ---
@@ -64,7 +61,7 @@ unsigned cifra(int n, unsigned i) {
 int imagen(int n) {
     // «negativo» memoriza si «n» es, inicialmente, positivo o negativo.
     bool negativo = n < 0;
-    n = abs(n);                 // si «n» es negativo, le cambia el signo    
+    n = abs(n);  // si «n» es negativo, le cambia el signo
 
     // Variable para el cálculo de la imagen especular de «n»
     int resultado = 0;
@@ -75,7 +72,7 @@ int imagen(int n) {
         // Y lo elimina de «n»
         n = n / 10;
     }
-    
+
     // Se devuelve el valor «resultado» con el signo que tenía «n» al
     // la ejecución de esta función.
     if (negativo) {
@@ -85,13 +82,12 @@ int imagen(int n) {
     }
 }
 
-
 /*
  *  Pre:  ---
  *  Post: Devuelve el factorial de «n».
  */
 unsigned factorial(unsigned n) {
-    int factorial = 1;      //  factorial = 0!
+    int factorial = 1;  //  factorial = 0!
     for (unsigned i = 2; i <= n; i++) {
         //  factorial = (i - 1)!
         factorial = i * factorial;
@@ -101,21 +97,20 @@ unsigned factorial(unsigned n) {
     return factorial;
 }
 
-
 /*
  *  Pre:  ---
  *  Post: Devuelve true si y solo si «n» es un número primo.
  */
 bool esPrimo(unsigned n) {
     if (n == 2) {
-        return true;      // «n» es igual a 2, luego es primo.
+        return true;  // «n» es igual a 2, luego es primo.
     } else if (n < 2 || n % 2 == 0) {
-        return false;     // «n» es menor que 2 o par mayor que 2.
+        return false;  // «n» es menor que 2 o par mayor que 2.
     } else {
         // Se buscan posibles divisores impares de «n» a partir del 3:
 
         // «divisor» indica el siguiente impar candidato a dividir a «n».
-        unsigned divisor = 3;              // Primer divisor impar a probar
+        unsigned divisor = 3;  // Primer divisor impar a probar
 
         // «encontrado» indica si se ha encontrado un divisor de «n».
         bool encontrado = false;
@@ -128,7 +123,6 @@ bool esPrimo(unsigned n) {
     }
 }
 
-
 /*
  *  Pre: a ≠ 0 o b ≠ 0
  *  Post: Devuelve el máximo común divisor de <a> y <b>.
@@ -137,12 +131,12 @@ unsigned mcd(int a, int b) {
     // Algoritmo de Euclides para el cálculo del mcd
     a = abs(a);
     b = abs(b);
-    
+
     while (b != 0) {
         int resto = a % b;
         a = b;
         b = resto;
     }
-    
+
     return a;
 }
